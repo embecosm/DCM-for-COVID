@@ -124,6 +124,7 @@ for i = 1:numel(State)
         #CY  = sum(C.data(Ci,3:end),1)';
         
         Ci  = logical(ismember(C.textdata(3:2:end),State{i}));
+
         CY  = sum(C.data(Ci,3:end),1)';
 
         % confirmed deaths

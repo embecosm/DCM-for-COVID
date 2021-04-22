@@ -38,7 +38,7 @@ if nargin < 1, country = 'United Kingdom';   end
 
 % Inversion (i.e., fitting) of empirical data
 %==========================================================================
-Fsi = spm_figure('GetWin','SI'); clf;
+Fsi = figure(); clf;
 
 % assemble (Gaussian) priors over model parameters
 %--------------------------------------------------------------------------

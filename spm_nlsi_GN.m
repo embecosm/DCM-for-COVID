@@ -107,7 +107,7 @@ try, M.Nmax;    catch, M.Nmax    = 128; end
 % figure (unless disabled)
 %--------------------------------------------------------------------------
 if ~M.nograph
-    Fsi = spm_figure('GetWin','SI');
+    Fsi = figure();
 end
 
 % check integrator or generation scheme
@@ -285,6 +285,7 @@ try
         ihC = ihC*speye(nh,nh);
     end
 catch
+    disp("spm_inv failed");
     ihC = speye(nh,nh)*exp(4);
 end
 
