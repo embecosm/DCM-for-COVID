@@ -13,7 +13,7 @@ persistent usebuiltin
 if isempty(usebuiltin)
    #usebuiltin = strcmp(spm_check_version,'matlab') && ...
                 #spm_check_version('matlab','9.5') >= 0;
-   usebuiltin = 1;
+   usebuiltin = 0;
 end
 
 if usebuiltin
