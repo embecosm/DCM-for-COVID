@@ -24,8 +24,12 @@ if (verbosity > 1)
   for i = 1:length(failed)
     Ofail = O.(failed{i});
     Rfail = evalin('caller', failed{i});
-    save(strcat(folder, 'Results/', int2str(i) ,"_O_", failed{i}, "_" ,oracle_name), "Ofail")
-    save(strcat(folder, 'Results/', int2str(i) ,"_R_", failed{i}, "_" ,oracle_name), "Rfail")
+    Fpath = strcat(folder, 'Results/', (strsplit(oracle_name, ".")){1}, "/");
+    FOname = strcat(int2str(i) ,"_R_", failed{i}, "_" ,oracle_name);
+    FRname = strcat(int2str(i) ,"_O_", failed{i}, "_" ,oracle_name);
+    mkdir(Fpath);
+    save(strcat(Fpath, FOname), "Ofail");
+    save(strcat(Fpath, FRname), "Rfail");
   end
   
   type1_passes = setdiff(expected_passes, passed);
