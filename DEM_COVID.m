@@ -30,11 +30,12 @@ function [DCM,GCM] = DEM_COVID(country,data)
 % F = 0; for i = 1:numel(DCM), F = F + DCM{1}.F; end, disp(F)
 
 % Flush outputs immediately for testing purposes
-page_output_immediately (1)
+
 % Get data (see DATA_COVID): an array with a structure for each country
 %==========================================================================
 if nargin < 2, data    = DATA_COVID_JHU(16); end
 if nargin < 1, country = 'United Kingdom';   end
+
 
 % Inversion (i.e., fitting) of empirical data
 %==========================================================================

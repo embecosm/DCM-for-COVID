@@ -324,6 +324,8 @@ C.F   = -Inf;                                   % free energy
 v     = -4;                                     % log ascent rate
 dFdh  = zeros(nh,1);
 dFdhh = zeros(nh,nh);
+
+
 for k = 1:M.Nmax
     
     % time
@@ -520,7 +522,7 @@ for k = 1:M.Nmax
     % Graphics
     %======================================================================
     if exist('Fsi', 'var')
-        spm_figure('Select', Fsi)
+        set(0, 'CurrentFigure', Fsi)
         
         
         % reshape prediction if necessary
@@ -603,7 +605,8 @@ for k = 1:M.Nmax
 end
 
 if exist('Fsi', 'var')
-    spm_figure('Focus', Fsi)
+    figure(Fsi)
+    %spm_figure('Focus', Fsi)
 end
 
 % outputs
