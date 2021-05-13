@@ -379,8 +379,18 @@ for k = 1:M.Nmax
         % gradients
         %------------------------------------------------------------------
         [dfdp,f] = spm_diff(IS,Ep,M,U,1,{V});
+        if (k == 1)
+          global ORACLE;
+          #TODO: Check the "expected fails" are indeed failing in a reasonable way
+          if (ORACLE)
+            expected_passes =  {};
+            expected_fails = {};
+            expected_unknown = {};
+            test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_nlsi_GN_2.mat', expected_passes, expected_fails, expected_unknown);
+          end
+        end
         dfdp     = reshape(spm_vec(dfdp),ny,np);
-        
+
         % check for stability
         %------------------------------------------------------------------
         normdfdp = norm(dfdp,'inf');
@@ -435,6 +445,8 @@ for k = 1:M.Nmax
     %----------------------------------------------------------------------
     e     =  spm_vec(y) - spm_vec(f) - dfdu*p(iu);
     J     = -[dfdp dfdu];
+    
+
     
     
     % M-step: Fisher scoring scheme to find h = max{F(p,h)}
@@ -641,7 +653,8 @@ for k = 1:M.Nmax
         end
         break
     end
-    
+
+
 end
 
 if exist('Fsi', 'var')

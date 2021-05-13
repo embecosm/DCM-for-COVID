@@ -102,6 +102,7 @@ if length(n) == 1
     
     % vectorise f
     %----------------------------------------------------------------------
+
     f  = spm_vec(f0);
     
     % if there are no arguments to differentiate w.r.t. ...
@@ -114,12 +115,16 @@ if length(n) == 1
     elseif isempty(f)
         J = sparse(0,length(xm));
     end
+
+
     
     % differentiation of a scalar or vector
     %----------------------------------------------------------------------
     if isnumeric(f0) && iscell(J) && q
         J = spm_dfdx_cat(J);
     end
+
+
     
     % assign output argument and return
     %----------------------------------------------------------------------
@@ -162,7 +167,7 @@ function dfdx = spm_dfdx(f,f0,dx)
 % numerical differences
 
 if iscell(f)
-    dfdx  = f;
+    dfdx  = f; 
     for i = 1:length(f(:))
         dfdx{i} = spm_dfdx(f{i},f0{i},dx);
     end
@@ -171,7 +176,6 @@ elseif isstruct(f)
 else
     dfdx  = (f - f0)/dx;
 end
-
 
 %==========================================================================
 % function J = spm_dfdx_cat(J)

@@ -19,7 +19,7 @@ function [testresult] = compare_with_oracle(callervars, verbosity, folder, oracl
       failed = [failed, varname];
     end
   end
-
+  
 if (verbosity > 1)
   for i = 1:length(failed)
     Ofail = O.(failed{i});
@@ -38,6 +38,7 @@ if (verbosity > 1)
   type2_fails = setdiff(failed, expected_fails);
   type1_unknown = setdiff(expected_unknown, unknown);
   type2_unknown = setdiff(unknown, expected_unknown);
+  disp(strcat(oracle_name," test"));
   disp("The following variables didn't match the Oracle when they should have:");
   disp(union(type1_passes, type2_fails));
   disp("The following variables matched the Oracle when they shouldn't have:");

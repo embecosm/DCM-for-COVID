@@ -260,7 +260,7 @@ while GS
     fprintf('%i out of %i free parameters removed \n',nelim,nparam)
     
     if nmax <= 8
-        spm_figure('Getwin','BMR - all'); clf
+        figure(); clf
         subplot(3,2,1)
         if numel(G) > 32, plot(G,'k'), else, bar(G,'c'), end
         title('log-posterior','FontSize',16)
@@ -372,7 +372,7 @@ end
 
 % Show full and reduced conditional estimates (for Bayesian average)
 %--------------------------------------------------------------------------
-spm_figure('Getwin','BMR - all');
+figure();
 
 if isstruct(DCM.Ep)
     i  = spm_find_pC(pC,DCM.Ep,field);
@@ -403,11 +403,13 @@ if nargout > 1
     BMR.K    = K;
     BMR.k    = k;
     
-    subplot(3,2,3), spm_plot_ci(qE(i),qC(i,i))
+    %subplot(3,2,3), spm_plot_ci(qE(i),qC(i,i))
+    subplot(3,2,3), plot(qE(i),qC(i,i))
     title('MAP (full)','FontSize',16)
     axis square, a = axis;
     
-    subplot(3,2,4), spm_plot_ci(Ep(j),abs(Cp(j,j)))
+    %subplot(3,2,4), spm_plot_ci(Ep(j),abs(Cp(j,j)))
+    subplot(3,2,4), plot(Ep(j),abs(Cp(j,j)))
     title('MAP (reduced)','FontSize',16), axis square, axis(a)
     
     subplot(3,2,5), imagesc(1 - K')

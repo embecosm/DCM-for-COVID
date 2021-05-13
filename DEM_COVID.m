@@ -33,7 +33,9 @@ function [DCM,GCM] = DEM_COVID(country,data)
 
 % Get data (see DATA_COVID): an array with a structure for each country
 %==========================================================================
-if nargin < 2, data    = DATA_COVID_JHU(16); end
+% if nargin < 2, data    = DATA_COVID_JHU(16); end
+% For testing purposes, limit this to 5
+if nargin < 2, data    = DATA_COVID_JHU(5); end
 if nargin < 1, country = 'United Kingdom';   end
 
 
@@ -46,6 +48,10 @@ Fsi = figure(); clf;
 [pE,pC,str] = spm_COVID_priors;
 hC          = 1/64;
 
+global SKIP_INVERSION;
+if (SKIP_INVERSION)
+  load("tests/checkpoints/inversion_checkpoint_1.mat");
+else
 % Bayesian inversion (placing posteriors in a cell array of structures)
 %--------------------------------------------------------------------------
 GCM   = cell(size(data(:)));
@@ -75,10 +81,31 @@ for i = 1:numel(data)
     GCM{i}   = DCM;
     
 end
-
 % Between country analysis (hierarchical or parametric empirical Bayes)
 %==========================================================================
-spm_figure('GetWin','BMR - all'); clf;
+save("checkpoint.mat");
+end
+# TODO make tests
+global ORACLE;
+if (ORACLE)
+  expected_passes =  {"country",
+    "hC",
+    "i",
+    "pC",
+    "str"};
+  expected_fails = {"Cp",
+    "DCM",
+    "Ep",
+    "F",
+    "GCM",
+    "Y",
+    "data",
+    "pE"};
+  expected_unknown = {};
+  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_COVID.mat', expected_passes, expected_fails, expected_unknown);
+end
+
+figure(); clf;
 %--------------------------------------------------------------------------
 % (Bayesian model comparison). This figure with reports the result of
 % Bayesian model comparison (a.k.a. Bayesian model reduction). In this
@@ -133,10 +160,41 @@ GLM.Xnames = Xn;
 % parametric empirical Bayes (with random effects in str.field)
 %==========================================================================
 [PEB,DCM] = spm_dcm_peb(GCM,GLM,str.field);
-
+global ORACLE;
+if (ORACLE)
+  expected_passes =  {"Xn",
+  "country",
+  "hC",
+  "i",
+  "lat",
+  "lon",
+  "pC",
+  "str"};
+  expected_fails = {"Cp",
+    "DCM",
+    "Ep",
+    "F",
+    "GCM",
+    "GLM",
+    "PEB",
+    "X",
+    "Y",
+    "data",
+    "pE"};
+  expected_unknown = {"ans"};
+  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_DCM_peb.mat', expected_passes, expected_fails, expected_unknown);
+end
 % Bayesian model averaging (over reduced models), testing for GLM effects
 %--------------------------------------------------------------------------
 [BMA,BMR] = spm_dcm_bmr_all(PEB,str.field);
+
+global ORACLE;
+if (ORACLE)
+  expected_passes =  {};
+  expected_fails = {};
+  expected_unknown = {};
+  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_dcm_bmr_all.mat', expected_passes, expected_fails, expected_unknown);
+end
 
 % Repeat inversion using parametric empirical priors
 %==========================================================================

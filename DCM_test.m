@@ -1,7 +1,9 @@
 function [Result] = DCM_test()
   page_screen_output(0);
   global ORACLE;
+  global SKIP_INVERSION;
   ORACLE = 1;
+  SKIP_INVERSION = 1;
   DEM_COVID();
   % Function for testing the DCM for COVID model. Currently based on using the
   % MATLAB version of the model as an Oracle for performance. 
