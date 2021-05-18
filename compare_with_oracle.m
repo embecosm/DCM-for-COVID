@@ -19,7 +19,14 @@ function [testresult] = compare_with_oracle(callervars, verbosity, folder, oracl
       failed = [failed, varname];
     end
   end
-  
+ 
+type1_passes = setdiff(expected_passes, passed);
+type2_passes = setdiff(passed, expected_passes);
+type1_fails = setdiff(expected_fails, failed);
+type2_fails = setdiff(failed, expected_fails);
+type1_unknown = setdiff(expected_unknown, unknown);
+type2_unknown = setdiff(unknown, expected_unknown);
+ 
 if (verbosity > 1)
   for i = 1:length(failed)
     Ofail = O.(failed{i});
@@ -32,12 +39,7 @@ if (verbosity > 1)
     save(strcat(Fpath, FRname), "Rfail");
   end
   
-  type1_passes = setdiff(expected_passes, passed);
-  type2_passes = setdiff(passed, expected_passes);
-  type1_fails = setdiff(expected_fails, failed);
-  type2_fails = setdiff(failed, expected_fails);
-  type1_unknown = setdiff(expected_unknown, unknown);
-  type2_unknown = setdiff(unknown, expected_unknown);
+
   disp(strcat(oracle_name," test"));
   disp("The following variables didn't match the Oracle when they should have:");
   disp(union(type1_passes, type2_fails));
@@ -62,7 +64,10 @@ end
 #  fclose(fidO);
 #  fclose(fidR);
 
-  testresult.passed = passed;
-  testresult.failed = failed;
-  testresult.unknown = unknown;
+  testresult = (isempty(type1_passes)
+    & isempty(type1_fails)
+    & isempty(type2_passes)
+    & isempty(type2_fails)
+    & isempty(type1_unknown)
+    & isempty(type2_unknown))
 end

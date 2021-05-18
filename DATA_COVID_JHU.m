@@ -204,37 +204,6 @@ for i = 1:numel(data)
     cases(:,i) = data(i).cases(1:t);
 end
 
-global ORACLE;
-if (ORACLE)
-  expected_passes =  {"n", 
-   "date",
-   "Npop",
-   "i",
-   "s",
-   "k",
-   "j",
-   "Ci",
-   "CY",
-   "Di",
-   "DY",
-   "d",
-   "l",
-   "T",
-   "t",
-   "death",
-   "cases"};
-  expected_fails = {"data"
-    "C",
-    "D",
-    "N",
-    "Location",
-    "State",
-    "Country",
-    "Data"};
-  expected_unknown = {"url"};
-  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'DATA_COVID_JHU.mat', expected_passes, expected_fails, expected_unknown);
-end
-
 % plot sorting, unless an outcome argument is specified
 %--------------------------------------------------------------------------
 if nargout, return, end

@@ -325,46 +325,6 @@ v     = -4;                                     % log ascent rate
 dFdh  = zeros(nh,1);
 dFdhh = zeros(nh,nh);
 
-global ORACLE;
-#TODO: Check the "expected fails" are indeed failing in a reasonable way
-if (ORACLE)
-  expected_passes =  {"C",
-    "Eu",
-    "Q",
-    "U",
-    "V",
-    "Y",
-    "criterion",
-    "dFdh",
-    "dFdhh",
-    "dfdu",
-    "dt",
-    "h",
-    "hE",
-    "ihC",
-    "ip",
-    "ipC",
-    "iu",
-    "nh",
-    "np",
-    "nq",
-    "nr",
-    "ns",
-    "nu",
-    "ny",
-    "p",
-    "pC",
-    "uC",
-    "v",
-    "y"};
-  expected_fails = {"Ep",
-    "M",
-    "ans",
-    "pE"};
-  expected_unknown = {};
-  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_nlsi_GN_1.mat', expected_passes, expected_fails, expected_unknown);
-end
-
 
 for k = 1:M.Nmax
     
