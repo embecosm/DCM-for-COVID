@@ -339,16 +339,6 @@ for k = 1:M.Nmax
         % gradients
         %------------------------------------------------------------------
         [dfdp,f] = spm_diff(IS,Ep,M,U,1,{V});
-        if (k == 1)
-          global ORACLE;
-          #TODO: Check the "expected fails" are indeed failing in a reasonable way
-          if (ORACLE)
-            expected_passes =  {};
-            expected_fails = {};
-            expected_unknown = {};
-            test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_nlsi_GN_2.mat', expected_passes, expected_fails, expected_unknown);
-          end
-        end
         dfdp     = reshape(spm_vec(dfdp),ny,np);
 
         % check for stability
@@ -534,7 +524,7 @@ for k = 1:M.Nmax
     % Graphics
     %======================================================================
     if exist('Fsi', 'var')
-        set(0, 'CurrentFigure', Fsi)
+        spm_figure('Select', Fsi)
         
         
         % reshape prediction if necessary

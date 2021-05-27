@@ -41,7 +41,7 @@ if nargin < 1, country = 'United Kingdom';   end
 
 % Inversion (i.e., fitting) of empirical data
 %==========================================================================
-Fsi = figure(); clf;
+Fsi = spm_figure('GetWin','SI'); clf;
 
 % assemble (Gaussian) priors over model parameters
 %--------------------------------------------------------------------------
@@ -85,27 +85,9 @@ end
 %==========================================================================
 save("checkpoint.mat");
 end
-# TODO make tests
-global ORACLE;
-if (ORACLE)
-  expected_passes =  {"country",
-    "hC",
-    "i",
-    "pC",
-    "str"};
-  expected_fails = {"Cp",
-    "DCM",
-    "Ep",
-    "F",
-    "GCM",
-    "Y",
-    "data",
-    "pE"};
-  expected_unknown = {};
-  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_COVID.mat', expected_passes, expected_fails, expected_unknown);
-end
 
-figure(); clf;
+
+spm_figure('GetWin','BMR - all'); clf;
 %--------------------------------------------------------------------------
 % (Bayesian model comparison). This figure with reports the result of
 % Bayesian model comparison (a.k.a. Bayesian model reduction). In this
@@ -159,68 +141,47 @@ GLM.Xnames = Xn;
 
 % parametric empirical Bayes (with random effects in str.field)
 %==========================================================================
+save("checkpoint_peb1.mat");
 [PEB,DCM] = spm_dcm_peb(GCM,GLM,str.field);
-global ORACLE;
-if (ORACLE)
-  expected_passes =  {"Xn",
-  "country",
-  "hC",
-  "i",
-  "lat",
-  "lon",
-  "pC",
-  "str"};
-  expected_fails = {"Cp",
-    "DCM",
-    "Ep",
-    "F",
-    "GCM",
-    "GLM",
-    "PEB",
-    "X",
-    "Y",
-    "data",
-    "pE"};
-  expected_unknown = {"ans"};
-  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_DCM_peb.mat', expected_passes, expected_fails, expected_unknown);
-end
+save("checkpoint_peb2.mat");
 % Bayesian model averaging (over reduced models), testing for GLM effects
 %--------------------------------------------------------------------------
+save("checkpoint_bmr1.mat");
 [BMA,BMR] = spm_dcm_bmr_all(PEB,str.field);
-
-global ORACLE;
-if (ORACLE)
-  expected_passes =  {};
-  expected_fails = {};
-  expected_unknown = {};
-  test_results = compare_with_oracle(who, 2, 'tests/testdata/', 'spm_dcm_bmr_all.mat', expected_passes, expected_fails, expected_unknown);
-end
+save("checkpoint_bmr2.mat");
 
 % Repeat inversion using parametric empirical priors
 %==========================================================================
-for i = 1:numel(DCM)
+global SKIP_INVERSION;
+if (SKIP_INVERSION)
+  load("tests/checkpoints/inversion_checkpoint_2.mat");
+else
+  for i = 1:numel(DCM)
 
-    % variational Laplace
-    %----------------------------------------------------------------------
-    set(Fsi,'name',data(i).country)
-    [F,Ep,Cp] = spm_COVID(DCM{i}.Y,DCM{i}.M.pE,DCM{i}.M.pC,hC);
-    
-    % assemble prior and posterior estimates (and log evidence)
-    %----------------------------------------------------------------------
-    DCM{i}.Ep = Ep;
-    DCM{i}.Cp = Cp;
-    DCM{i}.F  = F;
-    
-end
+      % variational Laplace
+      %----------------------------------------------------------------------
+      set(Fsi,'name',data(i).country)
+      [F,Ep,Cp] = spm_COVID(DCM{i}.Y,DCM{i}.M.pE,DCM{i}.M.pC,hC);
+      
+      % assemble prior and posterior estimates (and log evidence)
+      %----------------------------------------------------------------------
+      DCM{i}.Ep = Ep;
+      DCM{i}.Cp = Cp;
+      DCM{i}.F  = F;
+      
+  end
 
 % Bayesian parameter averaging (over countries)
 %--------------------------------------------------------------------------
+save("checkpoint_bpa1.mat");
+end
 BPA       = spm_dcm_bpa(DCM,'nocd');
-
+save("checkpoint_bpa2.mat");
 % save
 %--------------------------------------------------------------------------
 clear Fsi ans
 save COVID_DCM
+
 
 
 % Illustrate the largest between country effects
@@ -293,13 +254,13 @@ subplot(2,1,1)
 spm_plot_ci(Ep,Cp), hold on, bar(spm_vec(pE),1/4), hold off
 ylabel('log parameters','FontSize',16)
 set(gca,'XTick',1:spm_length(Ep),'Xticklabel',str.names)
-camorbit(90,0), axis square, box off
+%camorbit(90,0), axis square, box off
 
 subplot(2,1,2)
 spm_plot_ci(Ep,Cp,[],[],'exp')
 set(gca,'XTick',1:spm_length(Ep),'Xticklabel',str.names)
 ylabel('Parameters','FontSize',16)
-camorbit(90,0), axis square, box off
+%camorbit(90,0), axis square, box off
 
 
 % Differences among countries, in terms of parameters
@@ -485,9 +446,16 @@ spm_figure('GetWin',['Sensitivity: ' country]); clf
 
 % sensitivity analysis in terms of partial derivatives
 %--------------------------------------------------------------------------
-[ddY,dY] = spm_diff(@(P,M,U)spm_COVID_gen(P,M,U),Ep,M,1,[1,1]);
-Np       = spm_length(Ep);
 
+global SKIP_INVERSION;
+if (SKIP_INVERSION)
+  load("tests/checkpoints/checkpoint_diff.mat");
+else
+  save('checkpoint_diff1.mat');
+  [ddY,dY] = spm_diff(@(P,M,U)spm_COVID_gen(P,M,U),Ep,M,1,[1,1]);
+  save('checkpoint_diff2.mat');  
+end
+Np       = spm_length(Ep);
 % cumulative effects over time
 %--------------------------------------------------------------------------
 DY    = sum(dY);
@@ -502,7 +470,7 @@ subplot(2,1,1)
 bar(DY)
 set(gca,'XTick',1:Np,'Xticklabel',str.names,'FontSize',8)
 ylabel('First-order sensitivity','FontSize',16), box off
-camorbit(90,0),axis square
+%camorbit(90,0),axis square
 
 subplot(2,1,2)
 imagesc(DDY)
@@ -684,7 +652,7 @@ subplot(2,1,2)
 spm_plot_ci(SE(:),SC(:))
 ylabel('Mitigation: cumulative deaths','FontSize',16)
 set(gca,'XTick',1:numel(pol),'XTickLabel',pol)
-camorbit(90,0), axis square, box off
+%camorbit(90,0), axis square, box off
 
 % demonstrate routines: predictive validity
 %==========================================================================
@@ -701,6 +669,8 @@ camorbit(90,0), axis square, box off
 % 10 day ahead forecast for Italy 
 %--------------------------------------------------------------------------
 i  = find(ismember({data.country},'Italy'));
+%Temporary Fix
+i = 5;
 spm_COVID_PV(DCM,i,10);
 
 return
@@ -772,19 +742,17 @@ subplot(2,1,1)
 spm_plot_ci(Ep,Cp), hold on, bar(spm_vec(pE),1/4), hold off
 ylabel('log parameters','FontSize',16)
 set(gca,'XTick',1:spm_length(Ep),'Xticklabel',str.names)
-camorbit(90,0), axis square
+%camorbit(90,0), axis square
 
 subplot(2,1,2)
 spm_plot_ci(Ep,Cp,[],[],'exp')
 set(gca,'yLim',[0 32])
 set(gca,'XTick',1:spm_length(Ep),'Xticklabel',str.names)
 ylabel('Parameters','FontSize',16)
-camorbit(90,0), axis square
+%camorbit(90,0), axis square
 
 % plot data fit
 %--------------------------------------------------------------------------
 spm_figure('GetWin','Predictions');
 [Z,X] = spm_COVID_gen(Ep,M,1:4);
 spm_COVID_plot(Z,X,Y)
-
-

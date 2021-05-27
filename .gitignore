@@ -1,3 +1,5 @@
 *.mex*
 ./**/*.mex*
 tests/testdata/Results/*
+tests/testdata/tmp/*
+figures/*

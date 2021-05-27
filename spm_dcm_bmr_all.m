@@ -123,6 +123,22 @@ pC  = U'*pC*U;
 
 % Accumulated reduction vector (C)
 %--------------------------------------------------------------------------
+
+expected_passes =  {"DCM",
+  "OPT",
+  "U",
+  "beta",
+  "field",
+  "gamma",
+  "pC",
+  "pE",
+  "qC",
+  "qE"};
+expected_fails = {};
+expected_unknown = {};
+test_result = compare_with_oracle(who, 2, 'tests/testdata/tmp/', 'bmr126.mat', expected_passes, expected_fails, expected_unknown);
+disp(strcat("BMR test line 126 result ", int2str(test_result)));
+
 q   = diag(DCM.M.pC);
 if sum(q < 1024)
     C   = double(q > mean(q(q < 1024))/1024);
@@ -260,7 +276,7 @@ while GS
     fprintf('%i out of %i free parameters removed \n',nelim,nparam)
     
     if nmax <= 8
-        figure(); clf
+        spm_figure('Getwin','BMR - all'); clf
         subplot(3,2,1)
         if numel(G) > 32, plot(G,'k'), else, bar(G,'c'), end
         title('log-posterior','FontSize',16)
@@ -278,6 +294,41 @@ while GS
     end
     
 end
+
+expected_passes =  {"C",
+  "DCM",
+  "GS",
+  "K",
+  "OPT",
+  "R",
+  "S",
+  "U",
+  "beta",
+  "field",
+  "gamma",
+  "i",
+  "j",
+  "k",
+  "nK",
+  "nelim",
+  "nmax",
+  "nparam",
+  "pC",
+  "pE",
+  "q",
+  "qC",
+  "qE",
+  "r",
+  "rC",
+  "rE",
+  "s"};
+expected_fails = {"G",
+"Z",
+"p",
+"z"};
+expected_unknown = {};
+test_result = compare_with_oracle(who, 2, 'tests/testdata/tmp/', 'bmr285.mat', expected_passes, expected_fails, expected_unknown);
+disp(strcat("BMR test line 285 result ", int2str(test_result)));
 
 
 %-Inference over families (one family per coupling parameter)
@@ -372,7 +423,7 @@ end
 
 % Show full and reduced conditional estimates (for Bayesian average)
 %--------------------------------------------------------------------------
-figure();
+spm_figure('Getwin','BMR - all');
 
 if isstruct(DCM.Ep)
     i  = spm_find_pC(pC,DCM.Ep,field);
@@ -403,13 +454,11 @@ if nargout > 1
     BMR.K    = K;
     BMR.k    = k;
     
-    %subplot(3,2,3), spm_plot_ci(qE(i),qC(i,i))
-    subplot(3,2,3), plot(qE(i),qC(i,i))
+    subplot(3,2,3), spm_plot_ci(qE(i),qC(i,i))
     title('MAP (full)','FontSize',16)
     axis square, a = axis;
     
-    %subplot(3,2,4), spm_plot_ci(Ep(j),abs(Cp(j,j)))
-    subplot(3,2,4), plot(Ep(j),abs(Cp(j,j)))
+    subplot(3,2,4), spm_plot_ci(Ep(j),abs(Cp(j,j)))
     title('MAP (reduced)','FontSize',16), axis square, axis(a)
     
     subplot(3,2,5), imagesc(1 - K')

@@ -1,4 +1,4 @@
-# Created by Octave 4.2.2, Tue May 11 23:28:36 2021 BST <william-embecosm@williamembecosm-ThinkPad-T590>
+# Created by Octave 4.2.2, Thu May 20 20:14:12 2021 BST <william-embecosm@williamembecosm-ThinkPad-T590>
 # name: Cp
 # type: sparse matrix
 # nnz: 784
@@ -2661,7 +2661,7 @@
 
 # name: Fsi
 # type: scalar
-1
+7
 
 
 # name: GCM
@@ -11155,8 +11155,9 @@
 
 
 # name: SKIP_INVERSION
-# type: global scalar
-0
+# type: global matrix
+# rows: 0
+# columns: 0
 
 
 # name: Y
