@@ -124,21 +124,6 @@ pC  = U'*pC*U;
 % Accumulated reduction vector (C)
 %--------------------------------------------------------------------------
 
-expected_passes =  {"DCM",
-  "OPT",
-  "U",
-  "beta",
-  "field",
-  "gamma",
-  "pC",
-  "pE",
-  "qC",
-  "qE"};
-expected_fails = {};
-expected_unknown = {};
-test_result = compare_with_oracle(who, 2, 'tests/testdata/tmp/', 'bmr126.mat', expected_passes, expected_fails, expected_unknown);
-disp(strcat("BMR test line 126 result ", int2str(test_result)));
-
 q   = diag(DCM.M.pC);
 if sum(q < 1024)
     C   = double(q > mean(q(q < 1024))/1024);
@@ -294,42 +279,6 @@ while GS
     end
     
 end
-
-expected_passes =  {"C",
-  "DCM",
-  "GS",
-  "K",
-  "OPT",
-  "R",
-  "S",
-  "U",
-  "beta",
-  "field",
-  "gamma",
-  "i",
-  "j",
-  "k",
-  "nK",
-  "nelim",
-  "nmax",
-  "nparam",
-  "pC",
-  "pE",
-  "q",
-  "qC",
-  "qE",
-  "r",
-  "rC",
-  "rE",
-  "s"};
-expected_fails = {"G",
-"Z",
-"p",
-"z"};
-expected_unknown = {};
-test_result = compare_with_oracle(who, 2, 'tests/testdata/tmp/', 'bmr285.mat', expected_passes, expected_fails, expected_unknown);
-disp(strcat("BMR test line 285 result ", int2str(test_result)));
-
 
 %-Inference over families (one family per coupling parameter)
 %==========================================================================
