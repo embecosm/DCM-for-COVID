@@ -4,4 +4,4 @@ LABEL maintainer william.jones@embecosm.com
 
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y build-essential octave
+    apt-get install -y build-essential octave liboctave-dev
