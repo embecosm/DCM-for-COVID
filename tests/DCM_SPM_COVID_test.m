@@ -1,4 +1,7 @@
-function test_result = DCM_SPM_COVID_test()
+function test_result = DCM_SPM_COVID_test(verbosity)
+    if nargin < 1
+    verbosity = 2;
+  end
   load('./tests/data/Octave/spm_COVID_in.mat')
   expected_passes =  {};
   expected_fails = {};

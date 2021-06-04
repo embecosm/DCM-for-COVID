@@ -2,9 +2,10 @@ function test_result = DCM_SPM_diff_test(verbosity)
   if nargin < 1
     verbosity = 0;
   end
-  try
+  %try
     load('./tests/data/Octave/spm_diff_in.mat')
     M.G   = @spm_COVID_gen;           % generative function
+    M.IS   = @spm_COVID_gen; 
     M.L   = @spm_COVID_LL;            % log-likelihood function
     M.FS  = @spm_COVID_FS;            % feature selection (link function)
     IS = @(P,M,U)M.FS(M.IS(P,M,U));
@@ -39,14 +40,19 @@ function test_result = DCM_SPM_diff_test(verbosity)
       "pE",
       "uC",
       "v",
-      "y"};
-    expected_fails = {"M",
-      "ans",
-      "dfdp",
+      "y",
+      "M"};
+    expected_fails = {"dfdp",
       "f",
       "tStart"};
     expected_unknown = {}; 
     [dfdp,f] = spm_diff(IS,Ep,M,U,1,{V});
+
+    M = rmfield(M, 'G');
+    M = rmfield(M, 'IS');
+    M = rmfield(M, 'L');
+    M = rmfield(M, 'FS');    % generative function
+    clear IS;    
     test_outcome = test_compare(who, 2, 'tests/data/Octave/', 'spm_diff_out.mat', expected_passes, expected_fails, expected_unknown);
     test_result = test_outcome.result;
     % Check that "failed" comparisons are out by an amount appropriate for
@@ -57,14 +63,14 @@ function test_result = DCM_SPM_diff_test(verbosity)
     float_errors = all(all((f - failedvars.f) < 1e-9)) ...
     & all(cellfun(@(a,b) all(all((a - b) < thresh)),dfdp,failedvars.dfdp,'Un',1));
     test_result = test_result&float_errors;  
-  catch e
-    disp("Error in SPM_diff.m test");
-    if(verbosity)
-      disp(strcat('Error Identifier: ',e.identifier));
-      disp(strcat('Error Message: ',e.message));   
-    end
-    test_result = 2;
-  end
+  %catch e
+    %disp("Error in SPM_diff.m test");
+    %if(verbosity)
+      %disp(strcat('Error Identifier: ',e.identifier));
+      %disp(strcat('Error Message: ',e.message));   
+    %end
+    %test_result = 2;
+  %end
   if(verbosity)
     switch(test_result)
       case 1 disp("SPM_diff.m test passes")

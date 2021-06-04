@@ -41,31 +41,6 @@ failedvars = {};
       save(strcat(Fpath, FRname), "Rfail");
     end
   end
-  
-if(!verbosity)
-  disp(strcat(oracle_name," test"));
-  disp("The following variables didn't match the Oracle when they should have:");
-  disp(union(type1_passes, type2_fails));
-  disp("The following variables matched the Oracle when they shouldn't have:");
-  disp(union(type2_passes, type1_fails));
-  disp("The following variables are unknown when they should not be:");
-  disp(type1_unknown);
-  disp("The following variables are not unknown when they should be:");
-  disp(type2_unknown);
-  
-end
-
-#  fidO = fopen('tests/testdata/Result/DATA_COVID_JHU_O.mat', 'w');
-#  fidR = fopen('tests/testdata/Result/DATA_COVID_JHU_R.mat', 'w');
-
-#  for i = 1:length(failed)
-#    varname = failed{1,i};
-#    fprintf(fidO, '%g\n', O.(varname));
-#    fprintf(fidR, '%g\n', evalin('caller', varname));
-#  end
-    
-#  fclose(fidO);
-#  fclose(fidR);
 
   testresult.result = (isempty(type1_passes)
     & isempty(type1_fails)
@@ -77,4 +52,17 @@ end
   testresult.failed = failed;
   testresult.failedvars = failedvars;
   testresult.unknown = unknown;
+  
+  if(verbosity&!testresult.result)
+    disp(strcat(oracle_name," test"));
+    disp("The following variables didn't match the Oracle when they should have:");
+    disp(union(type1_passes, type2_fails));
+    disp("The following variables matched the Oracle when they shouldn't have:");
+    disp(union(type2_passes, type1_fails));
+    disp("The following variables are unknown when they should not be:");
+    disp(type1_unknown);
+    disp("The following variables are not unknown when they should be:");
+    disp(type2_unknown);
+    
+  end
 end

@@ -23,6 +23,7 @@ function DEM_COVID_tests(verbosity)
   
   % Notes: Include all necessary parameters for each test in the tex
   tests = {
+   % "DCM_SPM_COVID_test(verbosity)"
     "DCM_DATA_COVID_JHU_test(verbosity)"
     "DCM_spm_dcm_peb_test(verbosity)"
     "DCM_spm_dcm_bmr_test(verbosity)"
