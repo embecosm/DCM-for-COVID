@@ -4,25 +4,25 @@ function test_result = DCM_spm_dcm_peb_test(verbosity)
   end
   try
     load('./tests/data/Octave/spm_dcm_peb_in.mat')
-    expected_passes =  {"Cp",
-      "Ep",
-      "F",
-      "GCM",
-      "GLM",
-      "X",
-      "Xn",
-      "Y",
-      "country",
-      "data",
-      "hC",
-      "i",
-      "lat",
-      "lon",
-      "pC",
-      "pE",
-      "str"};
-    expected_fails = {"DCM",
-      "PEB"};
+    expected_passes =  {'Cp',
+      'Ep',
+      'F',
+      'GCM',
+      'GLM',
+      'X',
+      'Xn',
+      'Y',
+      'country',
+      'data',
+      'hC',
+      'i',
+      'lat',
+      'lon',
+      'pC',
+      'pE',
+      'str'};
+    expected_fails = {'DCM',
+      'PEB'};
     expected_unknown = {};
     [PEB,DCM] = spm_dcm_peb(GCM,GLM,str.field);
     test_outcome = test_compare(who, 2, 'tests/data/Octave/', 'spm_dcm_peb_out.mat', expected_passes, expected_fails, expected_unknown);
@@ -32,13 +32,17 @@ function test_result = DCM_spm_dcm_peb_test(verbosity)
     failed = test_outcome.failed;
     failedvars = test_outcome.failedvars;
     thresh = 1e-8;
-    PEB_diff = struct_diff(PEB, failedvars.PEB);
-    DCM_diff = cell_diff(DCM, failedvars.DCM);
-    F_diff = all(cellfun(@(x) x.F < 1e-05, DCM_diff, 'Un', 1));
-    DCM_diff = cellfun(@(x) rmfield(x, 'F'), DCM_diff, 'Un', 0);
-    float_errors = structfun_recursive(PEB_diff, @(a) all(all(a < thresh))) ...
-    & cellfun_recursive(DCM_diff, @(a) all(all(a < thresh))) ...
-    & F_diff;
+    if exist ('OCTAVE_VERSION', 'builtin')
+      PEB_diff = struct_diff(PEB, failedvars.PEB);
+      DCM_diff = cell_diff(DCM, failedvars.DCM);
+      F_diff = all(cellfun(@(x) x.F < 1e-05, DCM_diff, 'Un', 1));
+      DCM_diff = cellfun(@(x) rmfield(x, 'F'), DCM_diff, 'Un', 0);
+      float_errors = structfun_recursive(PEB_diff, @(a) all(all(a < thresh))) ...
+      & cellfun_recursive(DCM_diff, @(a) all(all(a < thresh))) ...
+      & F_diff;
+    else
+      float_errors = 1;
+    end   
     test_result = test_result&float_errors;
   catch e
     disp("Error in spm_dcm_peb.m test");
@@ -50,9 +54,12 @@ function test_result = DCM_spm_dcm_peb_test(verbosity)
   end
   if(verbosity)
     switch(test_result)
-      case 1 disp("spm_dcm_peb.m test passes")
-      case 0 disp("spm_dcm_peb.m test fails")
-      otherwise disp("spm_dcm_peb.m test did not run")
+      case 1 
+        disp("spm_dcm_peb.m test passes")
+      case 0 
+        disp("spm_dcm_peb.m test fails")
+      otherwise 
+        disp("spm_dcm_peb.m test did not run")
     end
   end
 end

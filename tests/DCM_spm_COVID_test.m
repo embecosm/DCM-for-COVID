@@ -1,4 +1,4 @@
-function test_result = DCM_SPM_COVID_test(verbosity)
+function test_result = DCM_spm_COVID_test(verbosity)
     if nargin < 1
     verbosity = 2;
   end

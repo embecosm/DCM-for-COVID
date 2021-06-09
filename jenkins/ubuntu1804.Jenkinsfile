@@ -13,12 +13,6 @@ node('builder') {
   }
 
   stage('Build') {
-    image.inside {
-      dir('src') {
-        sh script: 'make PLATFORM=octave'
-        sh script: 'make PLATFORM=octave install'
-      }
-    }
   }
 
   stage('Test') {

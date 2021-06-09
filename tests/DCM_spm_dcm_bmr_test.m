@@ -4,29 +4,29 @@ function test_result = DCM_spm_dcm_bmr_test(verbosity)
   end
   try
     load('./tests/data/Octave/spm_dcm_bmr_in.mat')
-    expected_passes =  {"Cp",
-      "DCM",
-      "Ep",
-      "F",
-      "GCM",
-      "GLM",
-      "PEB",
-      "X",
-      "Xn",
-      "Y",
-      "country",
-      "data",
-      "hC",
-      "i",
-      "lat",
-      "lon",
-      "pC",
-      "pE",
-      "str"};
-    expected_fails = {"BMA",
-      "BMR"};
-    expected_unknown = {"Fsi",
-      "ans"};
+    expected_passes =  {'Cp',
+      'DCM',
+      'Ep',
+      'F',
+      'GCM',
+      'GLM',
+      'PEB',
+      'X',
+      'Xn',
+      'Y',
+      'country',
+      'data',
+      'hC',
+      'i',
+      'lat',
+      'lon',
+      'pC',
+      'pE',
+      'str'};
+    expected_fails = {'BMA',
+      'BMR'};
+    expected_unknown = {'Fsi',
+      'ans'};
     [BMA,BMR] = spm_dcm_bmr_all(PEB,str.field);
     test_outcome = test_compare(who, 2, 'tests/data/Octave/', 'spm_dcm_bmr_out.mat', expected_passes, expected_fails, expected_unknown);
     test_result = test_outcome.result;
@@ -34,12 +34,16 @@ function test_result = DCM_spm_dcm_bmr_test(verbosity)
     % FP errors on the operations performed
     failed = test_outcome.failed;
     failedvars = test_outcome.failedvars;
-    thresh_bma = 5e-1;
-    thresh_bmr = 1e-10;
-    BMA_diff = struct_diff(BMA, failedvars.BMA);
-    BMR_diff = struct_diff(BMR, failedvars.BMR);
-    float_errors = structfun_recursive(BMA_diff, @(a) all(all(abs(a) < thresh_bma))) ...
-    & structfun_recursive(BMR_diff, @(a) all(all(abs(a) < thresh_bmr)));
+    if exist ('OCTAVE_VERSION', 'builtin')
+      thresh_bma = 5e-1;
+      thresh_bmr = 1e-10;
+      BMA_diff = struct_diff(BMA, failedvars.BMA);
+      BMR_diff = struct_diff(BMR, failedvars.BMR);
+      float_errors = structfun_recursive(BMA_diff, @(a) all(all(abs(a) < thresh_bma))) ...
+      & structfun_recursive(BMR_diff, @(a) all(all(abs(a) < thresh_bmr)));
+    else
+      float_errors = 1;
+    end   
     test_result = test_result&float_errors;
   catch e
     disp("Error in spm_dcm_bmr.m test");
@@ -51,9 +55,12 @@ function test_result = DCM_spm_dcm_bmr_test(verbosity)
   end
   if(verbosity)
     switch(test_result)
-      case 1 disp("spm_dcm_bmr.m test passes")
-      case 0 disp("spm_dcm_bmr.m test fails")
-      otherwise disp("spm_dcm_bmr.m test did not run")
+      case 1 
+        disp("spm_dcm_bmr.m test passes")
+      case 0 
+        disp("spm_dcm_bmr.m test fails")
+      otherwise 
+        disp("spm_dcm_bmr.m test did not run")
     end
   end
 end

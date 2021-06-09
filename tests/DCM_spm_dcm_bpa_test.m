@@ -4,28 +4,28 @@ function test_result = DCM_spm_dcm_bpa_test(verbosity)
   end
   try
     load('./tests/data/Octave/spm_dcm_bpa_in.mat')
-    expected_passes =  {"BMA",
-      "BMR",
-      "BPA",
-      "Cp",
-      "DCM",
-      "Ep",
-      "F",
-      "GCM",
-      "GLM",
-      "PEB",
-      "X",
-      "Xn",
-      "Y",
-      "country",
-      "data",
-      "hC",
-      "i",
-      "lat",
-      "lon",
-      "pC",
-      "pE",
-      "str"};
+    expected_passes =  {'BMA',
+      'BMR',
+      'BPA',
+      'Cp',
+      'DCM',
+      'Ep',
+      'F',
+      'GCM',
+      'GLM',
+      'PEB',
+      'X',
+      'Xn',
+      'Y',
+      'country',
+      'data',
+      'hC',
+      'i',
+      'lat',
+      'lon',
+      'pC',
+      'pE',
+      'str'};
     expected_fails = {};
     expected_unknown = {};
     BPA = spm_dcm_bpa(DCM,'nocd');
@@ -43,9 +43,12 @@ function test_result = DCM_spm_dcm_bpa_test(verbosity)
   end
   if(verbosity)
     switch(test_result)
-      case 1 disp("spm_dcm_bpa.m test passes")
-      case 0 disp("spm_dcm_bpa.m test fails")
-      otherwise disp("spm_dcm_bpa.m test did not run")
+      case 1 
+        disp("spm_dcm_bpa.m test passes")
+      case 0 
+        disp("spm_dcm_bpa.m test fails")
+      otherwise 
+        disp("spm_dcm_bpa.m test did not run")
     end
   end
 end

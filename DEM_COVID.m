@@ -33,9 +33,7 @@ function [DCM,GCM] = DEM_COVID(country,data)
 
 % Get data (see DATA_COVID): an array with a structure for each country
 %==========================================================================
-% if nargin < 2, data    = DATA_COVID_JHU(16); end
-% For testing purposes, limit this to 5
-if nargin < 2, data    = DATA_COVID_JHU(5); end
+if nargin < 2, data    = DATA_COVID_JHU(16); end
 if nargin < 1, country = 'United Kingdom';   end
 
 
@@ -48,44 +46,34 @@ Fsi = spm_figure('GetWin','SI'); clf;
 [pE,pC,str] = spm_COVID_priors;
 hC          = 1/64;
 
-global SKIP_INVERSION;
-if (SKIP_INVERSION)
-  load("tests/checkpoints/inversion_checkpoint_1.mat");
-else
 % Bayesian inversion (placing posteriors in a cell array of structures)
 %--------------------------------------------------------------------------
 GCM   = cell(size(data(:)));
-for i = 1:numel(data)
-    
-    % data for this country (here, and positive test rates)
-    %----------------------------------------------------------------------
-    set(Fsi,'name',data(i).country)
-    Y = [data(i).death, data(i).cases];
-   
-    % variational Laplace (estimating log evidence (F) and posteriors)
-    %======================================================================
-    [F,Ep,Cp,pE,pC] = spm_COVID(Y,pE,pC,hC);
-    
-    
-    % assemble prior and posterior estimates (and log evidence)
-    %----------------------------------------------------------------------
-    DCM.M.pE = pE;
-    DCM.M.pC = pC;
-    DCM.Ep   = Ep;
-    DCM.Cp   = Cp;
-    DCM.F    = F;
-    DCM.Y    = Y;
-    
-    % save this country (in a cell array)
-    %----------------------------------------------------------------------
-    GCM{i}   = DCM;
-    
+for i = 1:numel(data) 
+  % data for this country (here, and positive test rates)
+  %----------------------------------------------------------------------
+  set(Fsi,'name',data(i).country)
+  Y = [data(i).death, data(i).cases];
+ 
+  % variational Laplace (estimating log evidence (F) and posteriors)
+  %======================================================================
+  [F,Ep,Cp,pE,pC] = spm_COVID(Y,pE,pC,hC);
+
+  % assemble prior and posterior estimates (and log evidence)
+  %----------------------------------------------------------------------
+  DCM.M.pE = pE;
+  DCM.M.pC = pC;
+  DCM.Ep   = Ep;
+  DCM.Cp   = Cp;
+  DCM.F    = F;
+  DCM.Y    = Y;
+  
+  % save this country (in a cell array)
+  %----------------------------------------------------------------------
+  GCM{i}   = DCM;
 end
 % Between country analysis (hierarchical or parametric empirical Bayes)
 %==========================================================================
-save("checkpoint.mat");
-end
-
 
 spm_figure('GetWin','BMR - all'); clf;
 %--------------------------------------------------------------------------
@@ -141,42 +129,30 @@ GLM.Xnames = Xn;
 
 % parametric empirical Bayes (with random effects in str.field)
 %==========================================================================
-save("checkpoint_peb1.mat");
 [PEB,DCM] = spm_dcm_peb(GCM,GLM,str.field);
-save("checkpoint_peb2.mat");
 % Bayesian model averaging (over reduced models), testing for GLM effects
 %--------------------------------------------------------------------------
-save("checkpoint_bmr1.mat");
 [BMA,BMR] = spm_dcm_bmr_all(PEB,str.field);
-save("checkpoint_bmr2.mat");
 
 % Repeat inversion using parametric empirical priors
 %==========================================================================
-global SKIP_INVERSION;
-if (SKIP_INVERSION)
-  load("tests/checkpoints/inversion_checkpoint_2.mat");
-else
-  for i = 1:numel(DCM)
 
-      % variational Laplace
-      %----------------------------------------------------------------------
-      set(Fsi,'name',data(i).country)
-      [F,Ep,Cp] = spm_COVID(DCM{i}.Y,DCM{i}.M.pE,DCM{i}.M.pC,hC);
-      
-      % assemble prior and posterior estimates (and log evidence)
-      %----------------------------------------------------------------------
-      DCM{i}.Ep = Ep;
-      DCM{i}.Cp = Cp;
-      DCM{i}.F  = F;
-      
-  end
-
+for i = 1:numel(DCM)
+    % variational Laplace
+    %----------------------------------------------------------------------
+    set(Fsi,'name',data(i).country)
+    [F,Ep,Cp] = spm_COVID(DCM{i}.Y,DCM{i}.M.pE,DCM{i}.M.pC,hC);
+    
+    % assemble prior and posterior estimates (and log evidence)
+    %----------------------------------------------------------------------
+    DCM{i}.Ep = Ep;
+    DCM{i}.Cp = Cp;
+    DCM{i}.F  = F;
+    
+end
 % Bayesian parameter averaging (over countries)
 %--------------------------------------------------------------------------
-save("checkpoint_bpa1.mat");
-end
 BPA       = spm_dcm_bpa(DCM,'nocd');
-save("checkpoint_bpa2.mat");
 % save
 %--------------------------------------------------------------------------
 clear Fsi ans
@@ -447,14 +423,10 @@ spm_figure('GetWin',['Sensitivity: ' country]); clf
 % sensitivity analysis in terms of partial derivatives
 %--------------------------------------------------------------------------
 
-global SKIP_INVERSION;
-if (SKIP_INVERSION)
-  load("tests/checkpoints/checkpoint_diff.mat");
-else
-  save('checkpoint_diff1.mat');
-  [ddY,dY] = spm_diff(@(P,M,U)spm_COVID_gen(P,M,U),Ep,M,1,[1,1]);
-  save('checkpoint_diff2.mat');  
-end
+
+
+[ddY,dY] = spm_diff(@(P,M,U)spm_COVID_gen(P,M,U),Ep,M,1,[1,1]);
+
 Np       = spm_length(Ep);
 % cumulative effects over time
 %--------------------------------------------------------------------------
@@ -669,8 +641,6 @@ set(gca,'XTick',1:numel(pol),'XTickLabel',pol)
 % 10 day ahead forecast for Italy 
 %--------------------------------------------------------------------------
 i  = find(ismember({data.country},'Italy'));
-%Temporary Fix
-i = 5;
 spm_COVID_PV(DCM,i,10);
 
 return

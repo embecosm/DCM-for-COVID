@@ -43,33 +43,43 @@ function data = DATA_COVID_JHU(n)
 % IF you need to reaquire these files, you'll need to strip all commas and
 % quotes from fields for compatibility with octaves import functions
 %--------------------------------------------------------------------------
-% url = 'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/';
-% websave('time_series_covid19_confirmed_global.csv',[url,'time_series_covid19_confirmed_global.csv']);
-% websave('time_series_covid19_deaths_global.csv',[url,'time_series_covid19_deaths_global.csv']);
-
-
 % defaults
 %--------------------------------------------------------------------------
+url = 'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/';
 if nargin < 1, n = 16; end
-
+  
 % load data from https://github.com/CSSEGISandData/COVID-19/
+% Data import in octave isn't as well supported as it is in MATLAB, use local 
+% functions for this which may be slower 
 %--------------------------------------------------------------------------
-try
-    C  = importdata('time_series_covid19_confirmed_global.csv', ",");
-    D  = importdata('time_series_covid19_deaths_global.csv', ",");
-catch
-    clc, warning('Please load csv files into the current working directory')
-    help DATA_COVID_JHU
-    return;
+if exist ('OCTAVE_VERSION', 'builtin');
+  octave_websave('time_series_covid19_confirmed_global.csv',[url,'time_series_covid19_confirmed_global.csv']);
+  octave_websave('time_series_covid19_deaths_global.csv',[url,'time_series_covid19_deaths_global.csv']);
+    try
+        C  = octave_importglobal('time_series_covid19_confirmed_global.csv');
+        D  = octave_importglobal('time_series_covid19_deaths_global.csv'   );
+    catch
+        clc, warning('Please load csv files into the current working directory')
+        help DATA_COVID_JHU
+        return;
+    end
+    N      = octave_importpop('population.csv');  
+else
+  websave('time_series_covid19_confirmed_global.csv',[url,'time_series_covid19_confirmed_global.csv']);
+  websave('time_series_covid19_deaths_global.csv',[url,'time_series_covid19_deaths_global.csv']);
+  try
+      C  = importdata('time_series_covid19_confirmed_global.csv');
+      D  = importdata('time_series_covid19_deaths_global.csv'   );
+  catch
+      clc, warning('Please load csv files into the current working directory')
+      help DATA_COVID_JHU
+      return;
+  end
+  N      = importdata('population.csv');  
 end
-N      = importdata('population.csv', ",");       % population size
 
-
-% preliminary extraction
-% These have been changed because Octave doesn't support "nice" importing from CSV to struct
-%--------------------------------------------------------------------------
-date       = (strsplit(D.textdata{1,1}, ","))(5:end);
-Location   = D.textdata(3:2:end);            % location by country
+date       = D.textdata(1,5:end);            % date
+Location   = D.textdata(2:end,2);            % location by country
 State      = unique(Location);               % common countries
 Npop       = N.data;
 Country    = N.textdata;
@@ -77,35 +87,17 @@ Country    = N.textdata;
 % ensure consistency between covid timeseries and population data
 %--------------------------------------------------------------------------
 i          = logical(ismember(Country,{'United States of America','US'}));
-try
-  Country{i} = 'US';
-catch
-end
+Country{i} = 'US';
 i          = logical(ismember(Country,{'Republic of Korea'}));
-try
-Country{i} = 'Korea South';
-catch
-end
+Country{i} = 'Korea, South';
 i          = logical(ismember(Country,{'Russian Federation'}));
-try
 Country{i} = 'Russia';
-catch
-end
 i          = logical(ismember(Country,{'Venezuela (Bolivarian Republic of)'}));
-try
 Country{i} = 'Venezuela';
-catch
-end
 i          = logical(ismember(Country,{'Bolivia (Plurinational State of)'}));
-try
 Country{i} = 'Bolivia';
-catch
-end
 i          = logical(ismember(Country,{'Iran (Islamic Republic of)'}));
-try
 Country{i} = 'Iran';
-catch
-end
 
 % i = find(ismember(State,'Spain'));
 
@@ -120,23 +112,18 @@ for i = 1:numel(State)
         
         % confirmed cases
         %------------------------------------------------------------------
-        #Ci  = logical(ismember(C.textdata(2:end,2),State{i}));
-        #CY  = sum(C.data(Ci,3:end),1)';
-        
-        Ci  = logical(ismember(C.textdata(3:2:end),State{i}));
-
+        Ci  = logical(ismember(C.textdata(2:end,2),State{i}));
         CY  = sum(C.data(Ci,3:end),1)';
 
         % confirmed deaths
         %------------------------------------------------------------------
-        Di  = logical(ismember(D.textdata(3:2:end),State{i}));
+        Di  = logical(ismember(D.textdata(2:end,2),State{i}));
         DY  = sum(D.data(Di,3:end),1)';
         
         % save from first reported case
         %------------------------------------------------------------------
         d   = find(cumsum(CY) > 1,1);
-        l   = find(ismember(C.textdata(3:2:end),State{i}),1);
-
+        l   = find(ismember(C.textdata(2:end,2),State{i}),1);
         Data(k).country = State{i};
         Data(k).pop     = Npop(j)*1e3;
         Data(k).lat     = C.data(l,1);

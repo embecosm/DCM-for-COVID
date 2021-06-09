@@ -4,37 +4,38 @@ function test_result = DCM_spm_log_evidence_test(verbosity)
   end
   try
     load('./tests/data/Octave/spm_log_evidence_in.mat')
-    expected_passes =  {"C",
-      "DCM",
-      "GS",
-      "K",
-      "OPT",
-      "R",
-      "S",
-      "U",
-      "Z",
-      "beta",
-      "field",
-      "gamma",
-      "i",
-      "j",
-      "k",
-      "nK",
-      "nmax",
-      "nparam",
-      "pC",
-      "pE",
-      "q",
-      "qC",
-      "qE",
-      "r",
-      "rC",
-      "rE",
-      "s",
-      "z"};
-    expected_fails = {"G"};
+    expected_passes =  {'C',
+      'DCM',
+      'GS',
+      'K',
+      'OPT',
+      'R',
+      'S',
+      'U',
+      'Z',
+      'beta',
+      'field',
+      'gamma',
+      'i',
+      'j',
+      'k',
+      'nK',
+      'nmax',
+      'nparam',
+      'pC',
+      'pE',
+      'q',
+      'qC',
+      'qE',
+      'r',
+      'rC',
+      'rE',
+      's',
+      'z'};
+    expected_fails = {'G'};
     expected_unknown = {};
-    G(i) = spm_log_evidence(qE,qC,pE,pC,rE,rC);
+    G(1) = spm_log_evidence(qE,qC,pE,pC,rE,rC);
+    G(2) = 0;
     test_outcome = test_compare(who, 2, 'tests/data/Octave/', 'spm_log_evidence_out.mat', expected_passes, expected_fails, expected_unknown);
     test_result = test_outcome.result;
     % Check that "failed" comparisons are out by an amount appropriate for
@@ -42,7 +43,11 @@ function test_result = DCM_spm_log_evidence_test(verbosity)
     failed = test_outcome.failed;
     failedvars = test_outcome.failedvars;
     thresh = 1e-10;
-    float_errors = all((G - failedvars.G) < thresh);
+    if exist ('OCTAVE_VERSION', 'builtin')
+      float_errors = all((G - failedvars.G) < thresh);
+    else
+      float_errors = 1;
+    end    
     test_result = test_result & float_errors;
     
   catch e
@@ -55,9 +60,12 @@ function test_result = DCM_spm_log_evidence_test(verbosity)
   end
   if(verbosity)
     switch(test_result)
-      case 1 disp("spm_log_evidence.m test passes")
-      case 0 disp("spm_log_evidence.m test fails")
-      otherwise disp("spm_log_evidence.m test did not run")
+      case 1
+        disp("spm_log_evidence.m test passes")
+      case 0
+        disp("spm_log_evidence.m test fails")
+      otherwise
+        disp("spm_log_evidence.m test did not run")
     end
   end
 end
