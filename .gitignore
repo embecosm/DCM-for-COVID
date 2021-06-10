@@ -4,3 +4,4 @@ tests/testdata/Results/*
 tests/testdata/tmp/*
 tests/data/Octave/logs/*
 figures/*
+octave-workspace
