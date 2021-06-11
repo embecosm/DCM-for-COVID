@@ -21,6 +21,8 @@ function spm_plot_ci(E,C,x,j,s)
 ax   = gca;
 col  = get(ax,'ColorOrder');
 coli = get(ax,'ColorOrderIndex');
+coli = (mod(coli-1, length(col)) + 1);  %wrap around to starting color if we walk off the end
+disp(int2str(coli));
 coll = col(coli,:);
 colf = erf(coll + 1);
 

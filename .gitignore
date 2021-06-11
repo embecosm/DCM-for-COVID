@@ -5,3 +5,4 @@ tests/testdata/tmp/*
 tests/data/Octave/logs/*
 figures/*
 octave-workspace
+COVID_DCM.mat
