@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="335.01099mm"
+   height="253.03758mm"
+   viewBox="0 0 335.01099 253.03758"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="ArchitectureDiagram.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/william-embecosm/dev/DCM/man/ArchitectureDiagram.png"
+   inkscape:export-xdpi="300.01001"
+   inkscape:export-ydpi="300.01001">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1252"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path998"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6188"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6186"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6094"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6092"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4411"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4409"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2402"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path2400"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1636"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1634"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path928"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1490"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:collect="always">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1488"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1380"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:collect="always">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1378"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1320"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1318"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1270"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1268"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1208"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1206"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path931"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="529.13905"
+     inkscape:cy="452.78572"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-midpoints="true"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="1227"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.5119044,18.759037)">
+    <path
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 1.5119044,3.8276032 H 335.64286"
+       id="path5576"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5578"
+       d="M 1.5119044,29.529984 H 335.64286"
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 1.5119044,49.562722 H 335.64286"
+       id="path5580"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5582"
+       d="M 1.5119044,69.217484 H 335.64286"
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 1.5119044,118.73236 H 335.64286"
+       id="path5584"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5586"
+       d="M 1.5119044,153.70122 H 335.64286"
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 1.5119044,171.38331 H 335.64286"
+       id="path5588"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="86.835693"
+       y="46.20945"
+       id="text825"><tspan
+         sodipodi:role="line"
+         x="86.835693"
+         y="46.20945"
+         style="stroke-width:0.26458332"
+         id="tspan827">spm_COVID.m</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect861"
+       width="163.56204"
+       height="56.672276"
+       x="26.287481"
+       y="39.352169" />
+    <g
+       id="g903"
+       transform="translate(45.353849,-48.002972)">
+      <text
+         id="text837"
+         y="63.716053"
+         x="101.89803"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           id="tspan839"
+           style="stroke-width:0.26458332"
+           y="63.716053"
+           x="101.89803"
+           sodipodi:role="line">spm_COVID_priors.m</tspan></text>
+      <rect
+         y="56.881252"
+         x="100.23951"
+         height="9.5624132"
+         width="65.708008"
+         id="rect863"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g913"
+       transform="translate(-3.2127978,-3.4017857)">
+      <text
+         id="text833"
+         y="63.086098"
+         x="35.652237"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="63.086098"
+           x="35.652237"
+           id="tspan831"
+           sodipodi:role="line">spm_COVID_gen.m</tspan></text>
+      <rect
+         y="56.503281"
+         x="33.910805"
+         height="9.8296843"
+         width="60.089783"
+         id="rect865"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g894"
+       transform="translate(-54.695607,-34.546655)">
+      <flowRoot
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         id="flowRoot815"
+         xml:space="preserve"><flowRegion
+           style="stroke-width:0.26458332"
+           id="flowRegion817"><rect
+             style="stroke-width:0.07000434"
+             y="24.38508"
+             x="61.739262"
+             height="13.898016"
+             width="64.411957"
+             id="rect819" /></flowRegion><flowPara
+           style="stroke-width:0.26458332"
+           id="flowPara821">DATA_COVID_JHU.m</flowPara></flowRoot>      <rect
+         y="23.912201"
+         x="60.476189"
+         height="9.260417"
+         width="66.712799"
+         id="rect869"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g918"
+       transform="translate(11.985105)">
+      <text
+         id="text873"
+         y="80.778954"
+         x="73.766388"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="80.778954"
+           x="73.766388"
+           id="tspan871"
+           sodipodi:role="line">spm_nlsi_GN.m</tspan></text>
+      <rect
+         y="73.829941"
+         x="71.093697"
+         height="10.423512"
+         width="49.979401"
+         id="rect875"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2335">
+      <text
+         id="text845"
+         y="137.35661"
+         x="83.821915"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="137.35661"
+           x="83.821915"
+           id="tspan843"
+           sodipodi:role="line">spm_dcm_peb.m</tspan></text>
+      <rect
+         ry="0"
+         y="130.17543"
+         x="79.871567"
+         height="10.34129"
+         width="57.338814"
+         id="rect877"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2320"
+       transform="translate(-34.290715,26.0683)">
+      <text
+         id="text853"
+         y="173.33162"
+         x="66.015587"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="173.33162"
+           x="66.015587"
+           id="tspan851"
+           sodipodi:role="line">spm_dcm_bma.m</tspan></text>
+      <rect
+         y="165.77065"
+         x="63.877415"
+         height="11.626225"
+         width="54.255714"
+         id="rect881"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="27.345806"
+       y="167.27132"
+       id="text849"><tspan
+         sodipodi:role="line"
+         id="tspan847"
+         x="27.345806"
+         y="167.27132"
+         style="stroke-width:0.26458332">spm_dcm_bmr_all.m</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect879"
+       width="101.86796"
+       height="53.069702"
+       x="5.7805781"
+       y="160.42526" />
+    <g
+       id="g2325"
+       transform="translate(94.569435,41.786313)">
+      <g
+         id="g5657">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="66.474861"
+           y="187.8204"
+           id="text857"><tspan
+             sodipodi:role="line"
+             id="tspan855"
+             x="66.474861"
+             y="187.8204"
+             style="stroke-width:0.26458332">spm_dcm_bpa.m</tspan></text>
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect887"
+           width="53.453903"
+           height="10.958051"
+           x="64.411957"
+           y="181.00502" />
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 61.272064,62.931177 83.0788,73.829941"
+       id="path920"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1208)"
+       d="M 178.44736,18.440693 108.0685,39.352169"
+       id="path1204"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1270)"
+       d="M 108.0685,84.253455 V 96.024442"
+       id="path1266"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1320)"
+       d="M 39.136981,-1.3740361 108.0685,39.352169"
+       id="path1310"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="100.65776"
+       y="114.4764"
+       id="text1368"><tspan
+         sodipodi:role="line"
+         id="tspan1366"
+         x="100.65776"
+         y="114.4764"
+         style="stroke-width:0.26458332">(GCM)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1380)"
+       d="M 108.0685,96.024442 V 110.37425"
+       id="path1370"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path1632"
+       d="m 108.0685,115.02384 v 14.34981"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1636)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1490)"
+       d="M 79.871566,140.51672 56.714561,160.42526"
+       id="path2378"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2402)"
+       d="m 137.21039,140.51672 48.49795,82.27461"
+       id="path2392"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4407"
+       d="M 108.0685,48.34799 V 71.184097"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4411)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5590"
+       d="M 1.5119044,-18.623037 H 335.64286"
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="216.76933"
+       y="-7.8377976"
+       id="text5594"><tspan
+         sodipodi:role="line"
+         id="tspan5592"
+         x="216.76933"
+         y="-7.8377976"
+         style="stroke-width:0.26458332">1) Download the most recent daily data from the John </tspan><tspan
+         sodipodi:role="line"
+         x="216.76933"
+         y="-1.664187"
+         style="stroke-width:0.26458332"
+         id="tspan5596">Hopkins University Repository, cut and format it </tspan></text>
+    <text
+       id="text5606"
+       y="14.651783"
+       x="216.76933"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         id="tspan5604"
+         style="stroke-width:0.26458332"
+         y="14.651783"
+         x="216.76933"
+         sodipodi:role="line">2) Set the prior distribution parameters for each of the </tspan><tspan
+         style="stroke-width:0.26458332"
+         y="20.825394"
+         x="216.76933"
+         sodipodi:role="line"
+         id="tspan5610">COVID-19 model parameters</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="216.82962"
+       y="37.330357"
+       id="text5614"><tspan
+         sodipodi:role="line"
+         id="tspan5612"
+         x="216.82962"
+         y="37.330357"
+         style="stroke-width:0.26458332">3) Invert the &quot;forward&quot; COVID-19 model to generate</tspan><tspan
+         sodipodi:role="line"
+         x="216.82962"
+         y="43.503967"
+         style="stroke-width:0.26458332"
+         id="tspan5616">posterior parameter estimates</tspan></text>
+    <text
+       id="text5622"
+       y="56.985119"
+       x="221.0629"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
+         y="56.985119"
+         x="221.0629"
+         sodipodi:role="line"
+         id="tspan5626">3.1) Specify the COVID-19 generative model</tspan><tspan
+         style="stroke-width:0.26458332"
+         y="63.15873"
+         x="221.0629"
+         sodipodi:role="line"
+         id="tspan5630">structure, transitions, input and output data</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5632"
+       d="M 1.5119044,96.024445 H 335.64286"
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="221.0629"
+       y="83.972641"
+       id="text5638"><tspan
+         id="tspan5636"
+         sodipodi:role="line"
+         x="221.0629"
+         y="83.972641"
+         style="stroke-width:0.26458332">3.2) Perform inversion of the specified model</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="216.90437"
+       y="108.31429"
+       id="text5644"><tspan
+         sodipodi:role="line"
+         id="tspan5642"
+         x="216.90437"
+         y="108.31429"
+         style="stroke-width:0.26458332">4) Assemble the individual DCM inversions into a GCM</tspan><tspan
+         sodipodi:role="line"
+         x="216.90437"
+         y="114.4879"
+         style="stroke-width:0.26458332"
+         id="tspan5652">struct containing them all </tspan></text>
+    <text
+       id="text5648"
+       y="135.90656"
+       x="216.90437"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
+         y="135.90656"
+         x="216.90437"
+         id="tspan5646"
+         sodipodi:role="line">5) Perform hierarchical model inversion over the group</tspan><tspan
+         style="stroke-width:0.26458332"
+         y="142.08017"
+         x="216.90437"
+         sodipodi:role="line"
+         id="tspan5650">of DCMs specified in the GCM structure</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6094)"
+       d="m 56.714561,169.95026 v 21.88868"
+       id="path6082"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6188)"
+       d="m 56.714559,203.46516 v 10.0298"
+       id="path6084"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6414"
+       d="M 1.5119044,213.33866 H 335.64286"
+       style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="216.90437"
+       y="160.85298"
+       id="text6888"><tspan
+         id="tspan6886"
+         sodipodi:role="line"
+         x="216.90437"
+         y="160.85298"
+         style="stroke-width:0.26458332">6) Bayesian Model Reduction on the results of the</tspan><tspan
+         sodipodi:role="line"
+         x="216.90437"
+         y="167.0266"
+         style="stroke-width:0.26458332"
+         id="tspan6904">hierarchical anlysis, to determine useful parameters</tspan></text>
+    <text
+       id="text6894"
+       y="191.46906"
+       x="221.13765"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
+         y="191.46906"
+         x="221.13765"
+         sodipodi:role="line"
+         id="tspan6892">6.1) Perform model averaging as part of BMR, instead</tspan><tspan
+         style="stroke-width:0.26458332"
+         y="197.64267"
+         x="221.13765"
+         sodipodi:role="line"
+         id="tspan6908">of model selection</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="216.90437"
+       y="223.97501"
+       id="text6900"><tspan
+         id="tspan6898"
+         sodipodi:role="line"
+         x="216.90437"
+         y="223.97501"
+         style="stroke-width:0.26458332">7) Produce a Bayesian Parameter Average of the </tspan><tspan
+         sodipodi:role="line"
+         x="216.90437"
+         y="230.14862"
+         style="stroke-width:0.26458332"
+         id="tspan6912">parameters, effectively &quot;model independent&quot; estimate</tspan></text>
+    <g
+       id="g985"
+       transform="translate(4.7625002)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="127.08468"
+         y="59.684311"
+         id="text973"><tspan
+           sodipodi:role="line"
+           id="tspan971"
+           x="127.08468"
+           y="59.684311"
+           style="stroke-width:0.26458332">spm_COVID_B.m</tspan></text>
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect975"
+         width="55.176094"
+         height="9.451705"
+         x="124.81408"
+         y="53.101494" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker1252)"
+       d="m 129.57658,57.827346 c -38.788791,0.18899 -38.788791,0.18899 -38.788791,0.18899"
+       id="path987"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

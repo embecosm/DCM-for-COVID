@@ -123,12 +123,21 @@ for i = 1:numel(State)
         % save from first reported case
         %------------------------------------------------------------------
         d   = find(cumsum(CY) > 1,1);
+        
+        if (isnull(d)|isempty(d))
+          continue; 
+        end
         l   = find(ismember(C.textdata(2:end,2),State{i}),1);
         Data(k).country = State{i};
         Data(k).pop     = Npop(j)*1e3;
         Data(k).lat     = C.data(l,1);
         Data(k).long    = C.data(l,2);
-        Data(k).date    = date{d};
+        try
+          Data(k).date    = date{d};
+        catch
+          qwerty = 1;
+          disp(d);
+        end
         Data(k).cases   = spm_hist_smooth(gradient([zeros(8,1); CY(d:end)]),s);
         Data(k).death   = spm_hist_smooth(gradient([zeros(8,1); DY(d:end)]),s);
         Data(k).days    = numel(Data(k).cases);

@@ -1,166 +1,165 @@
 function [DCM,GCM] = DEM_COVID(country,data)
-% % FORMAT [DCM,GCM] = DEM_COVID(country,data)
-% % data    - data    to model [default: data = DATA_COVID_JHU]
-% % country - country to model [default: 'United Kingdom')
-% %
-% % Demonstration of COVID-19 modelling using variational Laplace
-% %__________________________________________________________________________
-% %
-% % This routine illustrates the Bayesian model inversion of a generative
-% % model of coronavirus spread using variational techniques (variational
-% % Laplace). It illustrates hierarchical Bayesian modelling by first
-% % inverting a generative model of each country, and then combining the
-% % posterior densities over the model parameters using parametric empirical
-% % Bayes to leverage systematic differences between countries, as
-% % characterised by their population, geographical location etc.
-% %
-% % Each subsection produces one or two figures that are described in the
-% % annotated (Matlab) code. These subsections core various subroutines that
-% % provide a more detailed description of things like the generative model,
-% % its priors and the evaluation confidence intervals.
-% %__________________________________________________________________________
-% % Copyright (C) 2020 Wellcome Centre for Human Neuroimaging
-% 
-% % Karl Friston
-% % $Id: DEM_COVID.m 7868 2020-06-02 16:39:02Z karl $
-% 
-% % F: -1.5701e+04 social distancing based upon P(infected)
-% % F: -1.5969e+04 social distancing based upon P(symptomatic)
-% % F: -1.5909e+04 social distancing based upon P(waiting)
-% % F = 0; for i = 1:numel(DCM), F = F + DCM{1}.F; end, disp(F)
-% 
-% % Flush octave outputs immediately
-%   if exist ('OCTAVE_VERSION', 'builtin');
-%     page_screen_output(0);
-%   end
-% % Get data (see DATA_COVID): an array with a structure for each country
-% %==========================================================================
-% if nargin < 2, data    = DATA_COVID_JHU(16); end
-% if nargin < 1, country = 'United Kingdom';   end
-% 
-% 
-% % Inversion (i.e., fitting) of empirical data
-% %==========================================================================
-% Fsi = spm_figure('GetWin','SI'); clf;
-% 
-% % assemble (Gaussian) priors over model parameters
-% %--------------------------------------------------------------------------
-% [pE,pC,str] = spm_COVID_priors;
-% hC          = 1/64;
-% 
-% % Bayesian inversion (placing posteriors in a cell array of structures)
-% %--------------------------------------------------------------------------
-% GCM   = cell(size(data(:)));
-% for i = 1:numel(data) 
-%   % data for this country (here, and positive test rates)
-%   %----------------------------------------------------------------------
-%   set(Fsi,'name',data(i).country)
-%   Y = [data(i).death, data(i).cases];
-%  
-%   % variational Laplace (estimating log evidence (F) and posteriors)
-%   %======================================================================
-%   [F,Ep,Cp,pE,pC] = spm_COVID(Y,pE,pC,hC);
-% 
-%   % assemble prior and posterior estimates (and log evidence)
-%   %----------------------------------------------------------------------
-%   DCM.M.pE = pE;
-%   DCM.M.pC = pC;
-%   DCM.Ep   = Ep;
-%   DCM.Cp   = Cp;
-%   DCM.F    = F;
-%   DCM.Y    = Y;
-%   
-%   % save this country (in a cell array)
-%   %----------------------------------------------------------------------
-%   GCM{i}   = DCM;
-% end
-% % Between country analysis (hierarchical or parametric empirical Bayes)
-% %==========================================================================
-% 
-% spm_figure('GetWin','BMR - all'); clf;
-% %--------------------------------------------------------------------------
-% % (Bayesian model comparison). This figure with reports the result of
-% % Bayesian model comparison (a.k.a. Bayesian model reduction). In this
-% % instance, the models compared are at the second or between country level.
-% % In other words, the models compared contained all combinations of (second
-% % level) parameters (a parameter is removed by setting its prior covariance
-% % to zero). If the model evidence increases - in virtue of reducing model
-% % complexity - then this parameter is redundant. The redundant parameters
-% % are shown in the lower panels by comparing the posterior expectations
-% % before and after Bayesian model reduction. The blue bars correspond to
-% % posterior expectations, while the pink bars denote 90% Bayesian credible
-% % intervals. The key thing to take from this analysis is that a large
-% % number of second level parameters are redundant. These second level
-% % parameters encode the effects of population size and geographical
-% % location, on each of the parameters of the generative model. The next
-% % figure illustrates the nonredundant effects that can be inferred with
-% % almost a 100% posterior confidence.
-% 
-% % general linear model (constant, log-population, latitude and longitude)
-% %--------------------------------------------------------------------------
-% % M.X      - 2nd-level design matrix: X(:,1) = ones(N,1) [default]
-% % M.bE     - 3rd-level prior expectation [default: DCM{1}.M.pE]
-% % M.bC     - 3rd-level prior covariance  [default: DCM{1}.M.pC/M.alpha]
-% % M.pC     - 2nd-level prior covariance  [default: DCM{1}.M.pC/M.beta]
-% %
-% % M.alpha  - optional scaling to specify M.bC [default = 1]
-% % M.beta   - optional scaling to specify M.pC [default = 16]
-% %--------------------------------------------------------------------------
-% lat    = spm_vec([data.lat]);
-% lon    = spm_vec([data.long]);
-% lat    = lat*2*pi/360;
-% lon    = lon*2*pi/360;
-% X      = [];
-% Xn     = {'const','log(N)'};
-% for  i = 1:4
-%     X  = [X sin(i*lon) sin(i*lat)];
-%     Xn = [Xn(:)', {sprintf('lat(%d)',i)}, {sprintf('lon(%d)',i)}];
-% end
-% 
-% % design matrix of explanatory variables
-% %--------------------------------------------------------------------------
-% X      = [log(spm_vec([data.pop])) X];
-% X      = [ones(numel(data),1) X];
-% X      = spm_orth(X,'norm');
-% X(:,1) = 1;
-% 
-% % place in general linear model
-% %--------------------------------------------------------------------------
-% GLM.X      = X;
-% GLM.Xnames = Xn;
-% 
-% % parametric empirical Bayes (with random effects in str.field)
-% %==========================================================================
-% [PEB,DCM] = spm_dcm_peb(GCM,GLM,str.field);
-% % Bayesian model averaging (over reduced models), testing for GLM effects
-% %--------------------------------------------------------------------------
-% [BMA,BMR] = spm_dcm_bmr_all(PEB,str.field);
-% 
-% % Repeat inversion using parametric empirical priors
-% %==========================================================================
-% 
-% for i = 1:numel(DCM)
-%     % variational Laplace
-%     %----------------------------------------------------------------------
-%     set(Fsi,'name',data(i).country)
-%     [F,Ep,Cp] = spm_COVID(DCM{i}.Y,DCM{i}.M.pE,DCM{i}.M.pC,hC);
-%     
-%     % assemble prior and posterior estimates (and log evidence)
-%     %----------------------------------------------------------------------
-% %     DCM{i}.Ep = Ep;
-%     DCM{i}.Cp = Cp;
-%     DCM{i}.F  = F;
-%     
-% end
-% % Bayesian parameter averaging (over countries)
-% %--------------------------------------------------------------------------
-% BPA       = spm_dcm_bpa(DCM,'nocd');
-% % save
-% %--------------------------------------------------------------------------
-% clear Fsi ans
-% save COVID_DCM
+% FORMAT [DCM,GCM] = DEM_COVID(country,data)
+% data    - data    to model [default: data = DATA_COVID_JHU]
+% country - country to model [default: 'United Kingdom')
+%
+% Demonstration of COVID-19 modelling using variational Laplace
+%__________________________________________________________________________
+%
+% This routine illustrates the Bayesian model inversion of a generative
+% model of coronavirus spread using variational techniques (variational
+% Laplace). It illustrates hierarchical Bayesian modelling by first
+% inverting a generative model of each country, and then combining the
+% posterior densities over the model parameters using parametric empirical
+% Bayes to leverage systematic differences between countries, as
+% characterised by their population, geographical location etc.
+%
+% Each subsection produces one or two figures that are described in the
+% annotated (Matlab) code. These subsections core various subroutines that
+% provide a more detailed description of things like the generative model,
+% its priors and the evaluation confidence intervals.
+%__________________________________________________________________________
+% Copyright (C) 2020 Wellcome Centre for Human Neuroimaging
 
-load COVID_DCM
+% Karl Friston
+% $Id: DEM_COVID.m 7868 2020-06-02 16:39:02Z karl $
+
+% F: -1.5701e+04 social distancing based upon P(infected)
+% F: -1.5969e+04 social distancing based upon P(symptomatic)
+% F: -1.5909e+04 social distancing based upon P(waiting)
+% F = 0; for i = 1:numel(DCM), F = F + DCM{1}.F; end, disp(F)
+
+% Flush octave outputs immediately
+  if exist ('OCTAVE_VERSION', 'builtin');
+    page_screen_output(0);
+  end
+% Get data (see DATA_COVID): an array with a structure for each country
+%==========================================================================
+if nargin < 2, data    = DATA_COVID_JHU(16); end
+if nargin < 1, country = 'United Kingdom';   end
+
+
+% Inversion (i.e., fitting) of empirical data
+%==========================================================================
+Fsi = spm_figure('GetWin','SI'); clf;
+
+% assemble (Gaussian) priors over model parameters
+%--------------------------------------------------------------------------
+[pE,pC,str] = spm_COVID_priors;
+hC          = 1/64;
+
+% Bayesian inversion (placing posteriors in a cell array of structures)
+%--------------------------------------------------------------------------
+GCM   = cell(size(data(:)));
+for i = 1:numel(data) 
+  % data for this country (here, and positive test rates)
+  %----------------------------------------------------------------------
+  set(Fsi,'name',data(i).country)
+  Y = [data(i).death, data(i).cases];
+ 
+  % variational Laplace (estimating log evidence (F) and posteriors)
+  %======================================================================
+  [F,Ep,Cp,pE,pC] = spm_COVID(Y,pE,pC,hC);
+
+  % assemble prior and posterior estimates (and log evidence)
+  %----------------------------------------------------------------------
+  DCM.M.pE = pE;
+  DCM.M.pC = pC;
+  DCM.Ep   = Ep;
+  DCM.Cp   = Cp;
+  DCM.F    = F;
+  DCM.Y    = Y;
+  
+  % save this country (in a cell array)
+  %----------------------------------------------------------------------
+  GCM{i}   = DCM;
+end
+% Between country analysis (hierarchical or parametric empirical Bayes)
+%==========================================================================
+
+spm_figure('GetWin','BMR - all'); clf;
+%--------------------------------------------------------------------------
+% (Bayesian model comparison). This figure with reports the result of
+% Bayesian model comparison (a.k.a. Bayesian model reduction). In this
+% instance, the models compared are at the second or between country level.
+% In other words, the models compared contained all combinations of (second
+% level) parameters (a parameter is removed by setting its prior covariance
+% to zero). If the model evidence increases - in virtue of reducing model
+% complexity - then this parameter is redundant. The redundant parameters
+% are shown in the lower panels by comparing the posterior expectations
+% before and after Bayesian model reduction. The blue bars correspond to
+% posterior expectations, while the pink bars denote 90% Bayesian credible
+% intervals. The key thing to take from this analysis is that a large
+% number of second level parameters are redundant. These second level
+% parameters encode the effects of population size and geographical
+% location, on each of the parameters of the generative model. The next
+% figure illustrates the nonredundant effects that can be inferred with
+% almost a 100% posterior confidence.
+
+% general linear model (constant, log-population, latitude and longitude)
+%--------------------------------------------------------------------------
+% M.X      - 2nd-level design matrix: X(:,1) = ones(N,1) [default]
+% M.bE     - 3rd-level prior expectation [default: DCM{1}.M.pE]
+% M.bC     - 3rd-level prior covariance  [default: DCM{1}.M.pC/M.alpha]
+% M.pC     - 2nd-level prior covariance  [default: DCM{1}.M.pC/M.beta]
+%
+% M.alpha  - optional scaling to specify M.bC [default = 1]
+% M.beta   - optional scaling to specify M.pC [default = 16]
+%--------------------------------------------------------------------------
+lat    = spm_vec([data.lat]);
+lon    = spm_vec([data.long]);
+lat    = lat*2*pi/360;
+lon    = lon*2*pi/360;
+X      = [];
+Xn     = {'const','log(N)'};
+for  i = 1:4
+    X  = [X sin(i*lon) sin(i*lat)];
+    Xn = [Xn(:)', {sprintf('lat(%d)',i)}, {sprintf('lon(%d)',i)}];
+end
+
+% design matrix of explanatory variables
+%--------------------------------------------------------------------------
+X      = [log(spm_vec([data.pop])) X];
+X      = [ones(numel(data),1) X];
+X      = spm_orth(X,'norm');
+X(:,1) = 1;
+
+% place in general linear model
+%--------------------------------------------------------------------------
+GLM.X      = X;
+GLM.Xnames = Xn;
+
+% parametric empirical Bayes (with random effects in str.field)
+%==========================================================================
+[PEB,DCM] = spm_dcm_peb(GCM,GLM,str.field);
+% Bayesian model averaging (over reduced models), testing for GLM effects
+%--------------------------------------------------------------------------
+[BMA,BMR] = spm_dcm_bmr_all(PEB,str.field);
+
+% Repeat inversion using parametric empirical priors
+%==========================================================================
+
+for i = 1:numel(DCM)
+    % variational Laplace
+    %----------------------------------------------------------------------
+    set(Fsi,'name',data(i).country)
+    [F,Ep,Cp] = spm_COVID(DCM{i}.Y,DCM{i}.M.pE,DCM{i}.M.pC,hC);
+    
+    % assemble prior and posterior estimates (and log evidence)
+    %----------------------------------------------------------------------
+%     DCM{i}.Ep = Ep;
+    DCM{i}.Cp = Cp;
+    DCM{i}.F  = F;
+    
+end
+% Bayesian parameter averaging (over countries)
+%--------------------------------------------------------------------------
+BPA       = spm_dcm_bpa(DCM,'nocd');
+% save
+%--------------------------------------------------------------------------
+clear Fsi ans
+save COVID_DCM
+
 
 % Illustrate the largest between country effects
 %==========================================================================
