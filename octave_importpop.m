@@ -26,7 +26,7 @@ function out = octave_importpop(filename, delim)
         quote_open = !quote_open;
         continue;
       end
-      if((current_char == delim)&!quote_open)
+      if((current_char == delim)&&!quote_open)
         if text_counter < 2
           textdata{i, text_counter} = buffer;
           text_counter = text_counter + 1;

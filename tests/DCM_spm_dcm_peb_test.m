@@ -35,7 +35,7 @@ function test_result = DCM_spm_dcm_peb_test(verbosity)
     if exist ('OCTAVE_VERSION', 'builtin')
       PEB_diff = struct_diff(PEB, failedvars.PEB);
       DCM_diff = cell_diff(DCM, failedvars.DCM);
-      F_diff = all(cellfun(@(x) x.F < 1e-05, DCM_diff, 'Un', 1));
+      F_diff = all(cellfun(@(x) x.F < 1e-03, DCM_diff, 'Un', 1));
       DCM_diff = cellfun(@(x) rmfield(x, 'F'), DCM_diff, 'Un', 0);
       float_errors = structfun_recursive(PEB_diff, @(a) all(all(a < thresh))) ...
       & cellfun_recursive(DCM_diff, @(a) all(all(a < thresh))) ...

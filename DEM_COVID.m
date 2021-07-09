@@ -32,6 +32,9 @@ function [DCM,GCM] = DEM_COVID(country,data)
 % Flush octave outputs immediately
   if exist ('OCTAVE_VERSION', 'builtin');
     page_screen_output(0);
+    # Disable warnings about MATLAB incompatibility. Useful, but Turned OFF by
+    # default because this often still warns for inbuilt Octave functions
+    warning('off', 'Octave:matlab-incompatible')
   end
 % Get data (see DATA_COVID): an array with a structure for each country
 %==========================================================================

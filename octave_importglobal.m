@@ -28,7 +28,7 @@ function out = octave_importglobal(filename, delim)
         quote_open = !quote_open;
         continue;
       end
-      if((current_char == delim)&!quote_open)
+      if((current_char == delim)&&!quote_open)
         if (i == 1)
           textdata{i, text_counter} = buffer;
           text_counter = text_counter + 1;

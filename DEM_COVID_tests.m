@@ -29,12 +29,12 @@ function DEM_COVID_tests(verbosity)
   % Notes: Include all necessary parameters for each test in the tex
   tests = {
     %["DCM_spm_COVID_test(",int2str(verbosity),")"] 
-    strcat("DCM_DATA_COVID_JHU_test(",int2str(verbosity),")")
-    strcat("DCM_spm_dcm_peb_test(",int2str(verbosity),")")
-    strcat("DCM_spm_dcm_bmr_test(",int2str(verbosity),")")
-    strcat("DCM_spm_dcm_bpa_test(",int2str(verbosity),")")
-    strcat("DCM_spm_log_evidence_test(",int2str(verbosity),")")
-    strcat("DCM_spm_diff_test(",int2str(verbosity),")")
+    strcat('DCM_DATA_COVID_JHU_test(',int2str(verbosity),')')
+    strcat('DCM_spm_dcm_peb_test(',int2str(verbosity),')')
+    strcat('DCM_spm_dcm_bmr_test(',int2str(verbosity),')')
+    strcat('DCM_spm_dcm_bpa_test(',int2str(verbosity),')')
+    strcat('DCM_spm_log_evidence_test(',int2str(verbosity),')')
+    strcat('DCM_spm_diff_test(',int2str(verbosity),')')
   };
   for i = 1:length(tests) 
     tests{i, 2} = eval(tests{i,1});

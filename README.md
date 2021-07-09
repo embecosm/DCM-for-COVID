@@ -1,28 +1,28 @@
 # DCM
 
-A repository for the COVID Dynamic Causal Model from the [SPM12 software](https://github.com/spm/spm12), ported to be an standalone in the Octave programming language that is backward compatible with MATLAB. 
+A repository for the COVID Dynamic Causal Model from the [SPM12 software](https://github.com/spm/spm12), ported to be an standalone in the [Octave](https://www.gnu.org/software/octave/index) programming language that is backward compatible with MATLAB. 
 
 Alongside this repository, we have also written about this work. See the [technical blogpost]() covering the theory of this repository, and a [practical blogpost]() discussing this implementation.
 
 # Usage 
 
 **Install**
-1. Install Octave (or MATLAB)
+1. Install [Octave](https://www.gnu.org/software/octave/index) (or [MATLAB](https://uk.mathworks.com/products/matlab.html))
 2. Clone the (repo)
 3. That’s it
 
 **Run**
 1. Navigate to the top level directory of the repository
-2. Run the command DEM_COVID();
+2. Run the command `DEM_COVID();`
 3. A full run will take 10-20 hours in Octave
 
 **Run tests (optional)**
 1. Navigate to the top level directory of the repository
-2. Run the command DEM_COVID_tests();
+2. Run the command `DEM_COVID_tests();`
 3. Tests should take in the region of 3 minutes to execute in Octave, and report success in all tests when done
 
 # Architecture
-Two brief notes those not familiar with Octave/MATLAB:
+Two brief notes to those not familiar with Octave/MATLAB:
 
 1. In Octave and MATLAB, each global function must be implemented in it’s own separate file
 2. The SPM software from which we have ported our standalone follows many other MATLAB and Octave programs in basing most data storage and manipulation in the Struct data type.
@@ -31,7 +31,7 @@ The structure of the program can be seen visually as follows:
 
 ![image](man/ArchitectureDiagram.svg)
 
-Walking through this, pp to date real world COVID-19 data is imported from the DATA_COVID_JHU function, and formatted for further processing. The data for each individual country is passed separately to the SPM_COVID.m function. This takes the countries data, a generative model specified by spm_COVID_gen (with transition matrix specified by spm_COVID_B) and priors specified by spm_COVID_priors and creates a model that it calls the spm_nlsi_GN.m function to invert.
+Walking through this, up to date real world COVID-19 data is imported from the DATA_COVID_JHU function, and formatted for further processing. The data for each individual country is passed separately to the SPM_COVID.m function. This takes the countries data, a generative model specified by spm_COVID_gen (with transition matrix specified by spm_COVID_B) and priors specified by spm_COVID_priors and creates a model that it calls the spm_nlsi_GN.m function to invert.
 
 This produces a DCM for each country, which is then assembled into the GCM cell array, containing all countries. This GCM cell array is then passed to the spm_dcm_peb.m function, which estimates a hierarchical model across all countries. This is one of the useful end results of the routine.
 
@@ -42,8 +42,10 @@ The key functions in realising the COVID-19 DCM, modelling in Figure 1. This is 
 
 ## DEM_COVID.m
 Central function that runs the COVID-19 Analysis. Caller of all functions below. 
-Inputs: NA
-Outputs: NA
+
+*Inputs:* NA
+
+*Outputs:* NA
 
 ## DATA_COVID_JHU.m
 Download and import function of up-to-date COVID data. Pulls from a github repository provided by John Hopkins University, which is updated daily with COVID pandemic data, and processes it into a suitable format to be operated on by later functions.
