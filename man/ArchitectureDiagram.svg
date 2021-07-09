@@ -229,9 +229,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="529.13905"
-     inkscape:cy="452.78572"
+     inkscape:zoom="0.60036931"
+     inkscape:cx="-163.91846"
+     inkscape:cy="313.84832"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -246,7 +246,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     showguides="true" />
+     showguides="true"
+     inkscape:snap-global="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -264,6 +265,99 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-1.5119044,18.759037)">
+    <rect
+       style="fill:#fafafa;fill-opacity:1;stroke:#eceff1;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1038"
+       width="334.13095"
+       height="17.682093"
+       x="1.5119044"
+       y="153.70122" />
+    <rect
+       style="fill:#fafafa;fill-opacity:1;stroke:#eceff1;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1036"
+       width="334.13095"
+       height="17.682093"
+       x="1.5119044"
+       y="153.70122" />
+    <rect
+       style="fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.23615429;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.96116507"
+       id="rect1034"
+       width="334.13095"
+       height="41.955345"
+       x="1.5119044"
+       y="171.38332" />
+    <rect
+       y="213.33865"
+       x="1.5119044"
+       height="20.317078"
+       width="334.13095"
+       id="rect1032"
+       style="fill:#fafafa;fill-opacity:1;stroke:#eceff1;stroke-width:0.26798087;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="118.73236"
+       x="1.5119044"
+       height="34.968861"
+       width="334.13095"
+       id="rect1030"
+       style="fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.23615429;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.96116507" />
+    <rect
+       style="fill:#fafafa;fill-opacity:1;stroke:#eceff1;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1028"
+       width="334.13095"
+       height="22.707916"
+       x="1.5119044"
+       y="96.024445" />
+    <rect
+       style="fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.23615429;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.96116507"
+       id="rect1026"
+       width="334.13095"
+       height="26.806961"
+       x="1.5119044"
+       y="69.217484" />
+    <rect
+       y="49.562721"
+       x="1.5119044"
+       height="19.654762"
+       width="334.13095"
+       id="rect1024"
+       style="fill:#fafafa;fill-opacity:1;stroke:#eceff1;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="29.529984"
+       x="1.5119044"
+       height="20.03274"
+       width="334.13095"
+       id="rect1022"
+       style="fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.23615429;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.96116507" />
+    <rect
+       ry="2.502054"
+       y="39.186348"
+       x="84.823051"
+       height="9.7667055"
+       width="46.399498"
+       id="rect1068"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.23771346;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="fill:#fafafa;fill-opacity:1;stroke:#eceff1;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1020"
+       width="334.13095"
+       height="25.702381"
+       x="1.5119044"
+       y="3.8276029" />
+    <rect
+       style="fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.96116507"
+       id="rect1010"
+       width="334.13095"
+       height="22.45064"
+       x="1.5119044"
+       y="-18.623037" />
+    <rect
+       ry="4.3951569"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect869"
+       width="66.712799"
+       height="9.260417"
+       x="5.7805815"
+       y="-10.634454" />
     <path
        style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1"
        d="M 1.5119044,3.8276032 H 335.64286"
@@ -311,146 +405,116 @@
          style="stroke-width:0.26458332"
          id="tspan827">spm_COVID.m</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect861"
        width="163.56204"
        height="56.672276"
        x="26.287481"
-       y="39.352169" />
-    <g
-       id="g903"
-       transform="translate(45.353849,-48.002972)">
-      <text
-         id="text837"
-         y="63.716053"
-         x="101.89803"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           id="tspan839"
-           style="stroke-width:0.26458332"
-           y="63.716053"
-           x="101.89803"
-           sodipodi:role="line">spm_COVID_priors.m</tspan></text>
-      <rect
-         y="56.881252"
-         x="100.23951"
-         height="9.5624132"
-         width="65.708008"
-         id="rect863"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g913"
-       transform="translate(-3.2127978,-3.4017857)">
-      <text
-         id="text833"
-         y="63.086098"
-         x="35.652237"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.26458332"
-           y="63.086098"
-           x="35.652237"
-           id="tspan831"
-           sodipodi:role="line">spm_COVID_gen.m</tspan></text>
-      <rect
-         y="56.503281"
-         x="33.910805"
-         height="9.8296843"
-         width="60.089783"
-         id="rect865"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g894"
-       transform="translate(-54.695607,-34.546655)">
-      <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         id="flowRoot815"
-         xml:space="preserve"><flowRegion
-           style="stroke-width:0.26458332"
-           id="flowRegion817"><rect
-             style="stroke-width:0.07000434"
-             y="24.38508"
-             x="61.739262"
-             height="13.898016"
-             width="64.411957"
-             id="rect819" /></flowRegion><flowPara
-           style="stroke-width:0.26458332"
-           id="flowPara821">DATA_COVID_JHU.m</flowPara></flowRoot>      <rect
-         y="23.912201"
-         x="60.476189"
-         height="9.260417"
-         width="66.712799"
-         id="rect869"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g918"
-       transform="translate(11.985105)">
-      <text
-         id="text873"
+       y="39.352169"
+       ry="10.210554" />
+    <rect
+       ry="4.7812066"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect863"
+       width="65.708008"
+       height="9.5624132"
+       x="145.59335"
+       y="8.8782806" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="147.25188"
+       y="15.713081"
+       id="text837"><tspan
+         sodipodi:role="line"
+         x="147.25188"
+         y="15.713081"
+         style="stroke-width:0.26458332"
+         id="tspan839">spm_COVID_priors.m</tspan></text>
+    <rect
+       ry="4.7075591"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect865"
+       width="60.089783"
+       height="9.8296843"
+       x="30.698008"
+       y="53.101494" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="32.439438"
+       y="59.684311"
+       id="text833"><tspan
+         sodipodi:role="line"
+         id="tspan831"
+         x="32.439438"
+         y="59.684311"
+         style="stroke-width:0.26458332">spm_COVID_gen.m</tspan></text>
+    <rect
+       ry="5.2117562"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect875"
+       width="49.979401"
+       height="10.423512"
+       x="83.078804"
+       y="73.829941" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="85.751495"
+       y="80.778954"
+       id="text873"><tspan
+         sodipodi:role="line"
+         id="tspan871"
+         x="85.751495"
          y="80.778954"
-         x="73.766388"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.26458332"
-           y="80.778954"
-           x="73.766388"
-           id="tspan871"
-           sodipodi:role="line">spm_nlsi_GN.m</tspan></text>
-      <rect
-         y="73.829941"
-         x="71.093697"
-         height="10.423512"
-         width="49.979401"
-         id="rect875"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g2335">
-      <text
-         id="text845"
-         y="137.35661"
+         style="stroke-width:0.26458332">spm_nlsi_GN.m</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect877"
+       width="57.338814"
+       height="10.34129"
+       x="79.871567"
+       y="130.17543"
+       ry="4.9055786" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="83.821915"
+       y="137.35661"
+       id="text845"><tspan
+         sodipodi:role="line"
+         id="tspan843"
          x="83.821915"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.26458332"
-           y="137.35661"
-           x="83.821915"
-           id="tspan843"
-           sodipodi:role="line">spm_dcm_peb.m</tspan></text>
-      <rect
-         ry="0"
-         y="130.17543"
-         x="79.871567"
-         height="10.34129"
-         width="57.338814"
-         id="rect877"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g2320"
-       transform="translate(-34.290715,26.0683)">
-      <text
-         id="text853"
-         y="173.33162"
-         x="66.015587"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.26458332"
-           y="173.33162"
-           x="66.015587"
-           id="tspan851"
-           sodipodi:role="line">spm_dcm_bma.m</tspan></text>
-      <rect
-         y="165.77065"
-         x="63.877415"
-         height="11.626225"
-         width="54.255714"
-         id="rect881"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
+         y="137.35661"
+         style="stroke-width:0.26458332">spm_dcm_peb.m</tspan></text>
+    <rect
+       ry="5.8131127"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect881"
+       width="54.255714"
+       height="11.626225"
+       x="29.5867"
+       y="191.83894" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="31.724873"
+       y="199.39992"
+       id="text853"><tspan
+         sodipodi:role="line"
+         id="tspan851"
+         x="31.724873"
+         y="199.39992"
+         style="stroke-width:0.26458332">spm_dcm_bma.m</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.27312872;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1066"
+       width="61.477779"
+       height="9.7312908"
+       x="26.411509"
+       y="160.42526"
+       ry="2.4929812" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -463,37 +527,32 @@
          y="167.27132"
          style="stroke-width:0.26458332">spm_dcm_bmr_all.m</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect879"
        width="101.86796"
        height="53.069702"
        x="5.7805781"
-       y="160.42526" />
-    <g
-       id="g2325"
-       transform="translate(94.569435,41.786313)">
-      <g
-         id="g5657">
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="66.474861"
-           y="187.8204"
-           id="text857"><tspan
-             sodipodi:role="line"
-             id="tspan855"
-             x="66.474861"
-             y="187.8204"
-             style="stroke-width:0.26458332">spm_dcm_bpa.m</tspan></text>
-        <rect
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           id="rect887"
-           width="53.453903"
-           height="10.958051"
-           x="64.411957"
-           y="181.00502" />
-      </g>
-    </g>
+       y="160.42526"
+       ry="10.958048" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect887"
+       width="53.453903"
+       height="10.958051"
+       x="158.98138"
+       y="222.79134"
+       ry="5.4790254" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="161.0443"
+       y="229.60672"
+       id="text857"><tspan
+         sodipodi:role="line"
+         id="tspan855"
+         x="161.0443"
+         y="229.60672"
+         style="stroke-width:0.26458332">spm_dcm_bpa.m</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
        d="M 61.272064,62.931177 83.0788,73.829941"
@@ -517,6 +576,14 @@
        id="path1310"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <rect
+       ry="0.99719065"
+       y="109.78117"
+       x="99.03553"
+       height="6.9029675"
+       width="18.655844"
+       id="rect1124"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.12672095;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -561,6 +628,15 @@
        id="path5590"
        d="M 1.5119044,-18.623037 H 335.64286"
        style="fill:none;stroke:#323232;stroke-width:0.27200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.27200002, 0.54400004999999996;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1126"
+       width="119.03985"
+       height="15.581132"
+       x="215.28503"
+       y="-14.39632"
+       ry="0"
+       rx="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -577,6 +653,13 @@
          y="-1.664187"
          style="stroke-width:0.26458332"
          id="tspan5596">Hopkins University Repository, cut and format it </tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1128"
+       width="119.66309"
+       height="14.023019"
+       x="215.28503"
+       y="9.2869997" />
     <text
        id="text5606"
        y="14.651783"
@@ -593,6 +676,69 @@
          x="216.76933"
          sodipodi:role="line"
          id="tspan5610">COVID-19 model parameters</tspan></text>
+    <rect
+       y="32.347073"
+       x="215.28503"
+       height="13.711395"
+       width="120.35783"
+       id="rect1132"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25473651;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="52.283367"
+       x="219.32858"
+       height="13.726499"
+       width="116.31428"
+       id="rect1134"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25055876;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="75.343445"
+       x="219.32858"
+       height="13.726499"
+       width="116.31428"
+       id="rect1136"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25055876;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="103.08289"
+       x="215.28252"
+       height="13.716437"
+       width="120.36032"
+       id="rect1138"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25478598;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="130.19347"
+       x="215.28192"
+       height="13.717628"
+       width="120.36094"
+       id="rect1140"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25479773;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="155.12639"
+       x="215.28503"
+       height="13.711395"
+       width="120.35783"
+       id="rect1142"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25473651;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="186.23549"
+       x="219.32574"
+       height="12.571238"
+       width="116.3171"
+       id="rect1144"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.2397861;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="219.00903"
+       x="215.28503"
+       height="13.711395"
+       width="115.92362"
+       id="rect1146"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25473651;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1130"
+       width="120.35783"
+       height="13.711395"
+       x="215.28503"
+       y="218.38579" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -651,12 +797,12 @@
          id="tspan5642"
          x="216.90437"
          y="108.31429"
-         style="stroke-width:0.26458332">4) Assemble the individual DCM inversions into a GCM</tspan><tspan
+         style="stroke-width:0.26458332">4) Assemble the individual DCM inversions into a </tspan><tspan
          sodipodi:role="line"
          x="216.90437"
          y="114.4879"
          style="stroke-width:0.26458332"
-         id="tspan5652">struct containing them all </tspan></text>
+         id="tspan5652">GCM struct containing them all </tspan></text>
     <text
        id="text5648"
        y="135.90656"
@@ -667,12 +813,12 @@
          y="135.90656"
          x="216.90437"
          id="tspan5646"
-         sodipodi:role="line">5) Perform hierarchical model inversion over the group</tspan><tspan
+         sodipodi:role="line">5) Perform hierarchical model inversion over the</tspan><tspan
          style="stroke-width:0.26458332"
          y="142.08017"
          x="216.90437"
          sodipodi:role="line"
-         id="tspan5650">of DCMs specified in the GCM structure</tspan></text>
+         id="tspan5650">group of DCMs specified in the GCM structure</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6094)"
        d="m 56.714561,169.95026 v 21.88868"
@@ -715,12 +861,12 @@
          y="191.46906"
          x="221.13765"
          sodipodi:role="line"
-         id="tspan6892">6.1) Perform model averaging as part of BMR, instead</tspan><tspan
+         id="tspan6892">6.1) Perform model averaging as part of BMR,</tspan><tspan
          style="stroke-width:0.26458332"
          y="197.64267"
          x="221.13765"
          sodipodi:role="line"
-         id="tspan6908">of model selection</tspan></text>
+         id="tspan6908">instead of model selection</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -737,32 +883,51 @@
          y="230.14862"
          style="stroke-width:0.26458332"
          id="tspan6912">parameters, effectively &quot;model independent&quot; estimate</tspan></text>
-    <g
-       id="g985"
-       transform="translate(4.7625002)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="127.08468"
+    <rect
+       ry="3.85289"
+       y="53.101494"
+       x="129.57658"
+       height="9.451705"
+       width="55.176094"
+       id="rect975"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text973"
+       y="59.684311"
+       x="131.84718"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
          y="59.684311"
-         id="text973"><tspan
-           sodipodi:role="line"
-           id="tspan971"
-           x="127.08468"
-           y="59.684311"
-           style="stroke-width:0.26458332">spm_COVID_B.m</tspan></text>
-      <rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.05833328;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect975"
-         width="55.176094"
-         height="9.451705"
-         x="124.81408"
-         y="53.101494" />
-    </g>
+         x="131.84718"
+         id="tspan971"
+         sodipodi:role="line">spm_COVID_B.m</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker1252)"
        d="m 129.57658,57.827346 c -38.788791,0.18899 -38.788791,0.18899 -38.788791,0.18899"
        id="path987"
        inkscape:connector-curvature="0" />
-  </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1148"
+       width="334.13095"
+       height="252.27876"
+       x="1.5119044"
+       y="-18.623037"
+       ry="1.872979" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot815"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       transform="translate(-54.695607,-34.546655)"><flowRegion
+         id="flowRegion817"
+         style="stroke-width:0.26458332"><rect
+           id="rect819"
+           width="64.411957"
+           height="13.898016"
+           x="61.739262"
+           y="24.38508"
+           style="stroke-width:0.07000434" /></flowRegion><flowPara
+         id="flowPara821"
+         style="stroke-width:0.26458332">DATA_COVID_JHU.m</flowPara></flowRoot>  </g>
 </svg>
