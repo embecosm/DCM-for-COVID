@@ -7,7 +7,7 @@ function [X] = spm_zeros(X)
 
 % Karl Friston
 % $Id: spm_zeros.m 6233 2014-10-12 09:43:50Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % create zeros structure
 %--------------------------------------------------------------------------

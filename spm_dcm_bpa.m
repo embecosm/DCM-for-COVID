@@ -44,7 +44,7 @@ function [BPA] = spm_dcm_bpa(P,nocd)
 
 % Will Penny & Klaas Enno Stephan
 % $Id: spm_dcm_bpa.m 7866 2020-05-30 09:57:38Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
  
 % Preiminaries
 %--------------------------------------------------------------------------

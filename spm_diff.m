@@ -29,7 +29,7 @@ function [varargout] = spm_diff(varargin)
 
 % Karl Friston
 % $Id: spm_diff.m 7977 2020-10-07 15:29:54Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % step size for numerical derivatives
 %--------------------------------------------------------------------------

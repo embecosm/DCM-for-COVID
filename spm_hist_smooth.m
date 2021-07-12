@@ -8,7 +8,7 @@ function x = spm_hist_smooth(x,s)
 
 % Karl Friston
 % $Id: spm_hist_smooth.m 8000 2020-11-03 19:04:17Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % remove negative values
 %--------------------------------------------------------------------------
 x    = x(:);

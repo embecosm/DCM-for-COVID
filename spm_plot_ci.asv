@@ -14,7 +14,7 @@ function spm_plot_ci(E,C,x,j,s)
 
 % Karl Friston
 % $Id: spm_plot_ci.m 8073 2021-03-02 19:55:30Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % get axis
 %--------------------------------------------------------------------------

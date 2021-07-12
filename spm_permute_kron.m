@@ -10,7 +10,7 @@ function A = spm_permute_kron(A,dim,order)
  
 % Karl Friston
 % $Id: spm_permute_kron.m 8000 2020-11-03 19:04:17Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % create indices
 %--------------------------------------------------------------------------

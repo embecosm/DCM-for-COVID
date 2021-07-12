@@ -16,7 +16,7 @@ function spm_COVID_plot(Y,X,Z,u,U)
 
 % Karl Friston
 % $Id: spm_COVID_plot.m 7891 2020-07-07 16:34:13Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % Plot outcomes
 %==========================================================================
 % https://www.england.nhs.uk/statistics/statistical-work-areas/critical-care-capacity/

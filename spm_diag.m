@@ -8,6 +8,7 @@ function D = spm_diag(varargin)
 
 % Guillaume Flandin
 % $Id: spm_diag.m 7809 2020-03-31 11:55:09Z karl $
+# SPDX-License-Identifier: GPL-2.0
 
 try
     X = varargin{1};

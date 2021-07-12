@@ -12,7 +12,7 @@ function [X] = spm_en(X,p)
 
 % Karl Friston
 % $Id: spm_en.m 3901 2010-05-27 16:14:36Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % detrend
 %--------------------------------------------------------------------------

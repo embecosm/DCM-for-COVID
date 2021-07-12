@@ -32,7 +32,7 @@ function [S,CS,Y,C] = spm_COVID_ci(Ep,Cp,Z,U,M)
 
 % Karl Friston
 % $Id: spm_COVID_ci.m 7871 2020-06-11 08:37:38Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % default: number of outcomes to evaluate
 %--------------------------------------------------------------------------
 if nargin < 4, U = 1:3; end

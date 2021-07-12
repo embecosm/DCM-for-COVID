@@ -10,7 +10,7 @@ function [K] = spm_perm_mtx(n)
  
 % Karl Friston
 % $Id: spm_perm_mtx.m 5657 2013-09-26 16:53:40Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 % get permutations
 %==========================================================================
 

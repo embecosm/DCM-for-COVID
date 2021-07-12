@@ -63,7 +63,7 @@ function x = spm_invNcdf(F,u,v)
 
 % Andrew Holmes
 % $Id: spm_invNcdf.m 6859 2016-08-24 16:46:16Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %-Format arguments, note & check sizes
 %--------------------------------------------------------------------------

@@ -30,7 +30,8 @@ function [F,sE,sC] = spm_log_evidence(varargin)
  
 % Karl Friston
 % $Id: spm_log_evidence.m 6856 2016-08-10 17:55:05Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
+
 % Compute reduced log-evidence
 %==========================================================================
  

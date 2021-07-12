@@ -14,7 +14,7 @@ function [Y] = spm_cross(X,x,varargin)
 
 % Karl Friston
 % $Id: spm_cross.m 7838 2020-04-23 17:40:45Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % handle single inputs
 %--------------------------------------------------------------------------
 if nargin < 2

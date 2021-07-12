@@ -51,7 +51,7 @@ function [Y,X,Z] = spm_COVID_gen(P,M,U)
 
 % Karl Friston
 % $Id: spm_COVID_gen.m 7929 2020-08-16 13:43:49Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % The generative model:
 %==========================================================================

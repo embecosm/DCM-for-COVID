@@ -12,6 +12,7 @@ function x = spm_normrnd(m, C, N)
 
 % Will Penny 
 % $Id: spm_normrnd.m 3603 2009-11-30 18:56:50Z guillaume $
+# SPDX-License-Identifier: GPL-2.0
 
 if iscell(C)
     deig = C{1};

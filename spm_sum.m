@@ -8,8 +8,11 @@ function S = spm_sum(varargin)
 
 % Guillaume Flandin
 % $Id: spm_sum.m 7814 2020-04-06 11:47:47Z guillaume $
+# SPDX-License-Identifier: GPL-2.0
 
 persistent usebuiltin
+% Turn off use of builtins for Octave compatibility. Add these again later toascii
+% Improve performance
 if isempty(usebuiltin)
    %usebuiltin = strcmp(spm_check_version,'matlab') && ...
                 %spm_check_version('matlab','9.5') >= 0;

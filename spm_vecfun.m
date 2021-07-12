@@ -11,7 +11,7 @@ function [X] = spm_vecfun(X,fun)
 
 % Karl Friston
 % $Id: spm_vecfun.m 7975 2020-10-06 14:46:56Z spm $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % vectorise numerical arrays
 %--------------------------------------------------------------------------

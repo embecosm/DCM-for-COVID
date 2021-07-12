@@ -14,6 +14,10 @@
 %
 % May result in false negatives (unable to parse a variable, for example)
 % but should not result in any false positives.
+%__________________________________________________________________________
+# Copyright (C) 2021 Embecosm Limited
+# Contributor: William Jones <william.jones@embecosm.com>
+# SPDX-License-Identifier: GPL-2.0
 function [testresult] = test_compare(callervars, verbosity, folder, oracle_name, expected_passes, expected_fails, expected_unknown)
   O = load(strcat(folder, oracle_name));
   oraclevars = fieldnames(O);

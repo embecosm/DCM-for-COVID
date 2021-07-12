@@ -46,7 +46,7 @@ function varargout = spm_figure(varargin)
 
 % Andrew Holmes
 % $Id: spm_figure.m 7833 2020-04-17 10:43:06Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %==========================================================================
 % - FORMAT specifications for embedded CallBack functions

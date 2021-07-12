@@ -16,7 +16,7 @@ function [ix] = spm_fieldindices(X,varargin)
 
 % Karl Friston
 % $Id: spm_fieldindices.m 7031 2017-02-27 19:46:48Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % if varargin is a vector simply return fieldnames
 %--------------------------------------------------------------------------

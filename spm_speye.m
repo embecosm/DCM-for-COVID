@@ -8,7 +8,7 @@ function [D] = spm_speye(m,n,k)
 
 % Karl Friston
 % $Id: spm_speye.m 1131 2008-02-06 11:17:09Z spm $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % default k = 0
 %--------------------------------------------------------------------------

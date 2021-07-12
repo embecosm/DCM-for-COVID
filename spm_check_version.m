@@ -63,7 +63,7 @@ function varargout = spm_check_version(tbx,chk)
 
 % Darren Gitelman
 % $Id: spm_check_version.m 6156 2014-09-05 17:34:53Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %-Detect software used
 %==========================================================================

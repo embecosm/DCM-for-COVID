@@ -16,7 +16,7 @@ function X = spm_orth(X,OPT)
  
 % Karl Friston
 % $Id: spm_orth.m 8045 2021-02-02 18:46:28Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 
 %-Default
 %--------------------------------------------------------------------------

@@ -25,7 +25,7 @@ function [F,sE,sC] = spm_log_evidence_reduce(qE,qC,pE,pC,rE,rC,TOL)
  
 % Karl Friston
 % $Id: spm_log_evidence_reduce.m 6849 2016-07-31 12:34:33Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 
 % Compute reduced log-evidence
 %==========================================================================

@@ -52,7 +52,7 @@ function F = spm_Ncdf(x,u,v)
 
 % Andrew Holmes
 % $Id: spm_Ncdf.m 7548 2019-03-20 10:08:49Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %-Format arguments, note & check sizes
 %--------------------------------------------------------------------------

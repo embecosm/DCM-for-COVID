@@ -49,7 +49,7 @@ function [dx] = spm_dx(dfdx,f,t)
 
 % Karl Friston
 % $Id: spm_dx.m 7975 2020-10-06 14:46:56Z spm $
-
+# SPDX-License-Identifier: GPL-2.0
 % defaults
 %--------------------------------------------------------------------------
 nmax  = 512;                        % threshold for numerical approximation

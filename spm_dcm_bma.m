@@ -89,7 +89,7 @@ function bma = spm_dcm_bma(post,post_indx,subj,Nsamp,oddsr)
 
 % Will Penny
 % $Id: spm_dcm_bma.m 7679 2019-10-24 15:54:07Z spm $
-
+# SPDX-License-Identifier: GPL-2.0
 % defaults
 %--------------------------------------------------------------------------
 if nargin < 4 || isempty(Nsamp)

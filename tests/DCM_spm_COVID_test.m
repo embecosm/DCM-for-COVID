@@ -1,3 +1,8 @@
+% Placeholder to test the spm_covid function against an earlier Oracle run
+%__________________________________________________________________________
+# Copyright (C) 2021 Embecosm Limited
+# Contributor: William Jones <william.jones@embecosm.com>
+# SPDX-License-Identifier: GPL-2.0
 function test_result = DCM_spm_COVID_test(verbosity)
     if nargin < 1
     verbosity = 2;

@@ -9,7 +9,7 @@ function [h] = spm_funcheck(f)
 
 % Karl Friston
 % $Id: spm_funcheck.m 6481 2015-06-16 17:01:47Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %-Create function handle
 %==========================================================================

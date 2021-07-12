@@ -18,7 +18,7 @@ function K = spm_kron(A,B)
  
 % Karl Friston
 % $Id: spm_kron.m 7814 2020-04-06 11:47:47Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % Deal with cell arrays
 %--------------------------------------------------------------------------

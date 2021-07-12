@@ -22,7 +22,7 @@ function [x] = spm_cat(x,d)
 
 % Karl Friston
 % $Id: spm_cat.m 8045 2021-02-02 18:46:28Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %error('spm_cat.c not compiled - see Makefile')
 

@@ -23,11 +23,13 @@ function [DCM,GCM] = DEM_COVID(country,data)
 
 % Karl Friston
 % $Id: DEM_COVID.m 7868 2020-06-02 16:39:02Z karl $
+# SPDX-License-Identifier: GPL-2.0
 
 % F: -1.5701e+04 social distancing based upon P(infected)
 % F: -1.5969e+04 social distancing based upon P(symptomatic)
 % F: -1.5909e+04 social distancing based upon P(waiting)
 % F = 0; for i = 1:numel(DCM), F = F + DCM{1}.F; end, disp(F)
+
 
 % Flush octave outputs immediately
   if exist ('OCTAVE_VERSION', 'builtin');

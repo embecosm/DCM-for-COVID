@@ -15,7 +15,7 @@ function [y] = spm_softmax(x,k)
  
 % Karl Friston
 % $Id: spm_softmax.m 7584 2019-05-02 12:10:56Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 % apply
 %--------------------------------------------------------------------------
 if nargin > 1,    x = k*x; end

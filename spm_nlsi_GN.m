@@ -97,7 +97,7 @@ function [Ep,Cp,Eh,F,L,dFdp,dFdpp] = spm_nlsi_GN(M,U,Y)
 
 % Karl Friston
 % $Id: spm_nlsi_GN.m 8045 2021-02-02 18:46:28Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % options
 %--------------------------------------------------------------------------
 try, M.nograph; catch, M.nograph = 0;   end

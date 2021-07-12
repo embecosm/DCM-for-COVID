@@ -11,7 +11,7 @@ function [Y] = spm_marginal(X)
 
 % Karl Friston
 % $Id: spm_marginal.m 7894 2020-07-12 09:34:25Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % evaluate marginals
 %--------------------------------------------------------------------------

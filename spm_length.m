@@ -14,7 +14,7 @@ function [n] = spm_length(X)
 
 % Karl Friston
 % $Id: spm_length.m 6233 2014-10-12 09:43:50Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % vectorise numerical arrays
 %--------------------------------------------------------------------------

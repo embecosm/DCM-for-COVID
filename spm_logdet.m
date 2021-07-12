@@ -11,6 +11,7 @@ function H = spm_logdet(C)
 
 % Karl Friston and Ged Ridgway
 % $Id: spm_logdet.m 7975 2020-10-06 14:46:56Z spm $
+# SPDX-License-Identifier: GPL-2.0
 
 % Note that whether sparse or full, rank deficient cases are handled in the
 % same way as in spm_logdet revision 4068, using svd on a full version of C

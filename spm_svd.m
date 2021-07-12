@@ -13,7 +13,7 @@ function [U,S,V] = spm_svd(X,U)
 
 % Karl Friston
 % $Id: spm_svd.m 6110 2014-07-21 09:36:13Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 % default thresholds - preclude singular vectors with small singular values
 %--------------------------------------------------------------------------

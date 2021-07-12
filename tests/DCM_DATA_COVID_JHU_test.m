@@ -1,3 +1,9 @@
+% Test the DATA_COVID_JHU function against an earlier Oracle run
+% Changes to the data import repository may cause this to fail unexpectedly
+%__________________________________________________________________________
+# Copyright (C) 2021 Embecosm Limited
+# Contributor: William Jones <william.jones@embecosm.com>
+# SPDX-License-Identifier: GPL-2.0
 function test_result = DCM_DATA_COVID_JHU_test(verbosity)
   if nargin < 1
     verbosity = 0;

@@ -65,7 +65,7 @@ function [DCM,BMR,BMA] = spm_dcm_bmr_all(DCM,field,OPT)
 
 % Karl Friston, Peter Zeidman
 % $Id: spm_dcm_bmr_all.m 8045 2021-02-02 18:46:28Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %-specification of null prior covariance
 %--------------------------------------------------------------------------

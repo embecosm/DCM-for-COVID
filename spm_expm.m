@@ -14,7 +14,7 @@ function [x] = spm_expm(J,x)
 
 % Karl Friston
 % $Id: spm_expm.m 5691 2013-10-11 16:53:00Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % % standard [eigen]solution
 % %--------------------------------------------------------------------------
 % [V,D] = eig(full(J));

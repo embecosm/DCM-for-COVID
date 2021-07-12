@@ -11,7 +11,7 @@ function [m] = spm_multrnd(p,N)
 
 % Will Penny
 % $Id: spm_multrnd.m 3190 2009-06-08 17:13:36Z guillaume $
-
+# SPDX-License-Identifier: GPL-2.0
 cp = [0; cumsum(p(:))];
 m  = zeros(N,1);
 for n=1:N

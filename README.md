@@ -2,7 +2,7 @@
 
 A repository for the COVID Dynamic Causal Model from the [SPM12 software](https://github.com/spm/spm12), ported to be an standalone in the [Octave](https://www.gnu.org/software/octave/index) programming language that is backward compatible with MATLAB. 
 
-Alongside this repository, we have also written about this work. See the [technical blogpost]() covering the theory of this repository, and a [practical blogpost]() discussing this implementation.
+Alongside this repository, we have also written about this work. See the [technical blogpost](https://www.embecosm.com/2021/07/12/open-source-dynamic-causal-modelling-of-covid-19-theory) covering the theory of this repository, and a [practical blogpost](https://www.embecosm.com/2021/07/12/open-source-dynamic-causal-modelling-of-covid-19-practice) discussing this implementation.
 
 # Usage 
 

@@ -13,7 +13,7 @@ function X = spm_inv(A,TOL)
  
 % Karl Friston
 % $Id: spm_inv.m 7143 2017-07-29 18:50:38Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 % check A 
 %--------------------------------------------------------------------------
 [m,n] = size(A);

@@ -1,10 +1,13 @@
-% Function to import time series CSV files for COVID data. Should work well on
-% the following specific files:
+% Function to import time series CSV files for COVID data. Written for the 
+% following specific files:
 %   - 'time_series_covid19_confirmed_global.csv'
 %   - 'time_series_covid19_deaths_global.csv'
 % from:
 % 'https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/'
-% and probably won't work well on anything else.
+%__________________________________________________________________________
+# Copyright (C) 2021 Embecosm Limited
+# Contributor: William Jones <william.jones@embecosm.com>
+# SPDX-License-Identifier: GPL-2.0
 function out = octave_importglobal(filename, delim)
   if (nargin < 2)
     delim = ',';

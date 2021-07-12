@@ -13,7 +13,7 @@ function [varargout] = spm_unvec(vX,varargin)
 
 % Karl Friston
 % $Id: spm_unvec.m 6238 2014-10-13 09:38:23Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %error('spm_unvec.c not compiled - see Makefile')
 

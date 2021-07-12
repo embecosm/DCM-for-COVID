@@ -1,7 +1,11 @@
-% Function to import time series CSV files for COVID data. Should work well on
-% the following specific files:
+% Function to import time series CSV files for COVID data. Written to import the
+% specific file
 %   - 'population.csv'
-% and probably won't work well on much else
+%
+%__________________________________________________________________________
+# Copyright (C) 2021 Embecosm Limited
+# Contributor: William Jones <william.jones@embecosm.com>
+# SPDX-License-Identifier: GPL-2.0
 
 function out = octave_importpop(filename, delim)
   if (nargin < 2)

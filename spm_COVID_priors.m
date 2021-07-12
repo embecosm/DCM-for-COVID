@@ -36,7 +36,7 @@ function [P,C,str,rfx] = spm_COVID_priors
 
 % Karl Friston
 % $Id: spm_COVID_priors.m 7929 2020-08-16 13:43:49Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % sources and background
 %--------------------------------------------------------------------------
 % https://jamanetwork.com/journals/jama/fullarticle/2761044

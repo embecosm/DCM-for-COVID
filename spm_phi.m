@@ -8,7 +8,7 @@ function [y] = spm_phi(x)
 
 % Karl Friston
 % $Id: spm_phi.m 1143 2008-02-07 19:33:33Z spm $
-
+# SPDX-License-Identifier: GPL-2.0
 % apply
 %---------------------------------------------------------------------------
 y   = 1./(1 + exp(-x));

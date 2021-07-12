@@ -92,7 +92,7 @@ function [PEB,P]   = spm_dcm_peb(P,M,field)
  
 % Karl Friston
 % $Id: spm_dcm_peb.m 8024 2020-11-28 12:09:53Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 
 % get filenames and set up
 %==========================================================================

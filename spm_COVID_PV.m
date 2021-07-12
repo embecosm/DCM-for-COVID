@@ -9,7 +9,7 @@ function spm_COVID_PV(DCM,i,T)
 
 % Karl Friston
 % $Id: spm_COVID_PV.m 7866 2020-05-30 09:57:38Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 % use priors from parametric empirical Bayes
 %--------------------------------------------------------------------------
 pE            = DCM{i}.M.pE;

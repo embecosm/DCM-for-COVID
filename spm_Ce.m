@@ -25,7 +25,7 @@ function [C] = spm_Ce(t,v,a)
  
 % Karl Friston
 % $Id: spm_Ce.m 7203 2017-11-08 12:49:15Z guillaume $
- 
+# SPDX-License-Identifier: GPL-2.0
  
 %-Defaults (and backward compatibility with spm_Ce(v,a) == spm_Ce('ar',v,a))
 %--------------------------------------------------------------------------

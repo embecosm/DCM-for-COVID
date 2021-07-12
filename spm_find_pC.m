@@ -21,7 +21,7 @@ function [i,pC,pE,Np] = spm_find_pC(varargin)
  
 % Karl Friston
 % $Id: spm_find_pC.m 8024 2020-11-28 12:09:53Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 %-parse input arguments
 %--------------------------------------------------------------------------
 if nargin > 2

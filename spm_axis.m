@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0
 function varargout = spm_axis(varargin)
 % AXIS  Control axis scaling and appearance.
 

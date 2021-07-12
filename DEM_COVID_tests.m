@@ -14,7 +14,10 @@
 % 0: print nothing but end result
 % 1: output details of test results to console
 % 2: output logs of failed comparisons to text file
-%
+%__________________________________________________________________________
+# Copyright (C) 2021 Embecosm Limited
+# Contributor: William Jones <william.jones@embecosm.com>
+# SPDX-License-Identifier: GPL-2.0
 
 function DEM_COVID_tests(verbosity)
   if nargin < 1

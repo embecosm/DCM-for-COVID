@@ -10,7 +10,7 @@ function X = spm_pinv(A,TOL)
  
 % Karl Friston
 % $Id: spm_pinv.m 5877 2014-02-11 20:03:34Z karl $
- 
+# SPDX-License-Identifier: GPL-2.0
 % check A
 %--------------------------------------------------------------------------
 [m,n] = size(A);

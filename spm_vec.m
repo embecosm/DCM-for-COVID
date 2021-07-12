@@ -14,7 +14,7 @@ function [vX] = spm_vec(X,varargin)
 
 % Karl Friston
 % $Id: spm_vec.m 6110 2014-07-21 09:36:13Z karl $
-
+# SPDX-License-Identifier: GPL-2.0
 
 %error('spm_vec.c not compiled - see Makefile')
 

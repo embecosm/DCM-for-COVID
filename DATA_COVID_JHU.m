@@ -37,11 +37,7 @@ function data = DATA_COVID_JHU(n)
 
 % Karl Friston
 % $Id: DATA_COVID_JHU.m 8001 2020-11-03 19:05:40Z karl $
-
-% get data
-% TODO: Implement websave in Octave. For now, files have been predownloaded. 
-% IF you need to reaquire these files, you'll need to strip all commas and
-% quotes from fields for compatibility with octaves import functions
+# SPDX-License-Identifier: GPL-2.0
 %--------------------------------------------------------------------------
 % defaults
 %--------------------------------------------------------------------------

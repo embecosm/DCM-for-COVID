@@ -22,7 +22,7 @@ function T = spm_COVID_B(x,P,r)
 
 % Karl Friston
 % $Id: spm_COVID_B.m 7942 2020-09-10 22:00:08Z spm $
-
+# SPDX-License-Identifier: GPL-2.0
 % setup
 %==========================================================================
 
